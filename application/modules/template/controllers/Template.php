@@ -7,6 +7,7 @@ class Template extends MX_Controller {
 		$this->load->view('nav1');
 		$this->load->view('body');
 		$this->load->view('footer');
+		
 	}
 	
 }

@@ -4,17 +4,17 @@
     
     <?php// if (isset($_SESSION['u_id'])) : print_r($_SESSION['authorization'])?>
       <!-- <a class="navbar-brand">Hello <?php //echo $this->session->userdata['name'] ?> !</a> -->
-    <?php //endif ?>
-    
+    <?php// endif ?>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
       <div class="navbar-nav ">
-        <a class="nav-item nav-link active" href="<?= site_url('joblist') ?>">Job List</a>
-        <a class="nav-item nav-link active" href="<?= site_url('home') ?>">Opportunities</a>
-        <a class="nav-item nav-link active" href="<?= site_url('home') ?>">Tenders</a>
-        <a class="nav-item nav-link active" href="<?= site_url('home') ?>">Skills</a>
+          <a class="nav-item nav-link active" href="<?= site_url('joblist') ?>">Job List</a>
+          <a class="nav-item nav-link active" href="<?= site_url('home') ?>">Opportunities</a>
+          <a class="nav-item nav-link active" href="<?= site_url('home') ?>">Tenders</a>
+          <a class="nav-item nav-link active" href="<?= site_url('home') ?>">Skills</a>
         <?php if (!isset($_SESSION['u_id'])) : ?>
 
           <li class="nav-item dropdown">

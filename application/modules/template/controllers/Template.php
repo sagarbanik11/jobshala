@@ -9,7 +9,6 @@ class Template extends MX_Controller {
 		$this->load->view('footer');
 		
 	}
-	
 }
 
 

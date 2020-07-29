@@ -31,7 +31,7 @@
         <?php elseif ($this->session->userdata['authorization'] == 1) : ?>
           <a class="nav-item nav-link active" href="<?php echo site_url(); ?>eprofile">Dashboard</a>
           <a class="nav-item nav-link active" href="<?php echo site_url(); ?>addjob">Add Job</a>
-          <a class="nav-item nav-link active" href="<?php echo site_url(); ?>applications">Applications</a>
+          <a class="nav-item nav-link active" href="<?php echo site_url(); ?>scapplication">Applications</a>
           <a class="nav-item nav-link active" href="<?= site_url('login/logout') ?>">Logout</a>
         <?php else : ?>
           <a class="nav-item nav-link active" href="<?php echo site_url(); ?>japplication/allview">Applications</a>

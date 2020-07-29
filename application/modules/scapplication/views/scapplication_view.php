@@ -1,5 +1,5 @@
 <div class="container">
- <legend >Submitted Applications</legend>
+ <legend >Applications</legend>
  
  <?php echo $this->session->flashdata('msg'); ?>
 <br><br>
@@ -9,7 +9,9 @@
             <th scope="col">Job Id</th>
             <th scope="col">Role</th>
             <th scope="col">Apply Date</th>
-            <th scope="col">Company</th>
+            <th scope="col">Candidate Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile No</th>
             <th scope="col">Status</th>
             <th scope="col">Action</th>
           </tr>
@@ -21,6 +23,8 @@
           <td><?= $r->role?></td>
           <td><?= $r->adate?></td>
           <td><?= $r->name?></td>
+          <td><?= $r->email?></td>
+          <td><?= $r->mobile?></td>
           <?php if($r->jstatus==0):?>
            <td>Progress</td>
             <?php elseif($r->jstatus==1):?>
@@ -31,6 +35,9 @@
           <td>
          <a href="<?php echo site_url(); ?>scapplication/single/<?= $r->ja_id?>" class="btn">
          <i class="fa fa-eye" style="font-size:20px;color:black" aria-hidden="true"></i>     
+         </a>
+         <a href="#" class="btn">
+         <i class="fa fa-trash" style="font-size:20px;color:red" aria-hidden="true"></i>            
          </a>
          </td>
          

@@ -52,6 +52,8 @@ class Japplication extends MX_Controller {
 		$data['experience']=$_POST['experience'];
 		$data['gender']=$_POST['gender'];
 		$data['website']=$_POST['website'];
+		$data['adate']=date('Y-m-d H:i:s');
+		$data['status']=0;
 
 		$this->mdl_japplication->apply($data);
 		$this->session->set_flashdata('msg', '<b style="color:green;">Application successfully submitted!</b>');

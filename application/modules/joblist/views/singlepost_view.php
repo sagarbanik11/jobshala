@@ -13,8 +13,12 @@
     <p class="mb-1"><?= $r->jrequirement?></p>
     <legend >Location</legend>
     <small><?= $r->location?></small>
-    <button onclick="window.location.href='<?php echo site_url(); ?>japplication/apply/<?= $r->j_id?>'" type="button" class="btn btn-dark float-right">Apply Now</button>
+    <?php if (!isset($_SESSION['u_id'])) : ?>
+      <button onclick="window.location.href='<?php echo site_url(); ?>japplication/apply/<?= $r->j_id?>'" type="button" class="btn btn-dark float-right">Apply Now</button>
+      <?php elseif ($this->session->userdata['authorization'] == 2) : ?>
+        <button onclick="window.location.href='<?php echo site_url(); ?>japplication/apply/<?= $r->j_id?>'" type="button" class="btn btn-dark float-right">Apply Now</button>
+    <?php endif ?>
   </a>
-  <?php }?>
+      <?php } ?>
 </div>
-</div>
+</div> 

@@ -145,7 +145,7 @@ CREATE TABLE `user` (
   `u_id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `mobile` int(20) NOT NULL,
+  `mobile` varchar(10) NOT NULL,
   `sector` varchar(50) DEFAULT NULL,
   `Industry` varchar(200) DEFAULT NULL,
   `password` varchar(200) NOT NULL,

@@ -4,7 +4,7 @@ class Home extends MX_Controller {
 	public function index()
 	{	
 		
-		$val['title']='Homepage Php Tutorial';
+		$val['title']='Home';
 		$val['file']='home/home_view';
 		echo Modules::run('template/layout1',$val);
 	}

@@ -10,4 +10,6 @@ class Mdl_joblist extends MX_Controller {
         $this->db->insert($this->table,$data);
         return $this->db->insert_id();
     }
+    
+    
 }

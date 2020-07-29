@@ -98,12 +98,12 @@ body {
     font-size: 15px;
   }
   :-moz-selection {
-    background: #f0c9a8;
+    background: #7fccd896;
     text-shadow: none;
   }
   
   ::selection {
-    background: #f0c9a8;
+    background: #76c3cf96;
     text-shadow: none;
   }
   nav {

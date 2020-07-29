@@ -4,7 +4,7 @@ class Template extends MX_Controller {
 	public function layout1($val)
 	{
 		$this->load->view('header',$val);
-		$this->load->view('nav1');
+		$this->load->view('navbar');
 		$this->load->view('body');
 		$this->load->view('footer');
 		

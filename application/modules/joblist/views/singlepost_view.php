@@ -42,7 +42,12 @@
             <ul class="list-group list-group-flush">
               <li class="list-group-item"><small>Job Location<br><?= $r->location?></small></li>
               <li class="list-group-item"><small>Industry<br><?= $r->industry?></small></li>
-              <li class="list-group-item"><small>Status<br><?php if($r->status == 1): echo "Applications Open"; else: echo "Closed"; endif?></small></li>
+              <li class="list-group-item"><small>Status
+              <div id="status-text">
+              <?php if($r->status == 1): echo "Applications Open"; 
+                else: echo "Closed"; ?></div>
+                
+                <?php endif?></small></li>
               
             </ul>
           </div>
@@ -58,6 +63,9 @@
         </div>
     </div>
   </a>
+  <script>
+                if(document.querySelector('#status-text').textContent.trim()=='Closed')
+                document.querySelector('.apply-btn').style.display='none';</script>
       <?php } ?>
 </div>
 </div> 

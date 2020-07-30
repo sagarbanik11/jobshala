@@ -1,5 +1,5 @@
-<div class="container">
- <legend >Company Job List</legend>
+<div class="container" style="margin-top:100px">
+ <h5>Opportunities in <?=$_SESSION['name']?></h5>
  
  <?php echo $this->session->flashdata('msg'); ?>
  <button onclick="window.location.href='<?php echo site_url(); ?>addjob'" type="button" class="btn btn-dark float-right">Add Job</button>

@@ -1,43 +1,19 @@
+<?php $this->db->select('*');
+    $this->db->from('uprofile');
+    $this->db->join('user', 'user.u_id= uprofile.u_id');
+    $this->db->where('uprofile.u_id',$this->session->userdata('u_id'));
+    $data=$this->db->get(); 
+?>
+
 <div class="container emp-profile">
-            <form method="post">
-            <?php echo $this->session->flashdata('msg'); ?><br>
                 <div class="row">
                 <?php foreach ($data->result() as $r){?>
                     <div class="col-md-4">
                         <div class="profile-img">
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
-                            <div class="file btn btn-lg btn-primary">
-                                Change Photo
-                                <input type="file" name="file"/>
-                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="profile-head">
-                                    <h5>
-                                    <?= $r->name?>
-                                    </h5>
-                                    <h6>
-                                    <?= $r->profession?>
-                                    </h6>
-                                    <p class="proile-rating">RANKINGS : <span>8/10</span></p>
-                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Timeline</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="education-tab" data-toggle="tab" href="#education" role="tab" aria-controls="education" aria-selected="false">Education</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                  
-                    <div class="col-md-2">
-                    <button onclick="window.location.href='<?php echo site_url(); ?>uprofile/editview'" type="button" class="btn btn-dark float-right">Edit Profile</button>
-                    </div>
+                    
 
                 </div>
                 
@@ -199,7 +175,5 @@
                     </div>
                     <?php }?>
                 </div>
-            </form>
-            <button onclick="window.location.href='<?php echo site_url(); ?>uprofile/pdf'" type="button" class="btn btn-dark float-right">Download Resume</button>
            
         </div>

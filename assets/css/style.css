@@ -1,6 +1,6 @@
 /* Employee Profile CSS */
 .emp-profile {
-  padding: 3%;
+  padding: 0px 0px 0px 20px;
   margin-top: 3%;
   margin-bottom: 3%;
   border-radius: 0.5rem;
@@ -10,8 +10,8 @@
   text-align: center;
 }
 .profile-img img {
-  width: 70%;
-  height: 100%;
+  /* width: 70%;
+  height: 100%; */
 }
 .profile-img .file {
   position: relative;
@@ -49,6 +49,7 @@
   color: #818182;
   margin-top: 5%;
 }
+
 .proile-rating span {
   color: #495057;
   font-size: 15px;

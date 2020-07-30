@@ -31,19 +31,17 @@
           </li>
           <a class="nav-item nav-link active" href="<?php echo site_url(); ?>login">Login</a>
         <?php elseif ($this->session->userdata['authorization'] == 1) : ?>
-
-          <li class="nav-item dropdown">
-            <a class="dropdown-toggle nav-link active" href="#" role="button" id="#myprofile-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              My Profile
-            </a>
-            <div class="dropdown-menu" aria-labelledby="myprofile-info">
-              <a class="dropdown-item" href="<?= site_url('eprofile/') ?>">Account</a>
-              <a class="dropdown-item" href="<?= site_url('eprofile/dashboard') ?>">Posted Jobs</a>
-              <a class="dropdown-item" href="<?php echo site_url(); ?>addjob">Add Job</a>
-              <a class="dropdown-item" href="<?php echo site_url(); ?>scapplication">Applications</a>
-              <a class="dropdown-item" href="<?= site_url('login/logout') ?>">Logout</a>
-            </div>
-          </li>
+          <a class="nav-item nav-link active" href="<?php echo site_url(); ?>eprofile">Profile</a>
+          <a class="nav-item nav-link active" href="<?php echo site_url(); ?>eprofile/dashboard">Dashboard</a>
+          <a class="nav-item nav-link active" href="<?php echo site_url(); ?>addjob">Add Job</a>
+          <a class="nav-item nav-link active" href="<?php echo site_url(); ?>scapplication">Applications</a>
+          <a class="nav-item nav-link active" href="<?= site_url('login/logout') ?>">Logout</a>
+        <?php elseif ($this->session->userdata['authorization'] == 0) : ?>
+          <a class="nav-item nav-link active" href="<?php echo site_url(); ?>admin">Dashbaord</a>
+          <a class="nav-item nav-link active" href="<?php echo site_url(); ?>admin/employeer">Employeer</a>
+          <a class="nav-item nav-link active" href="<?php echo site_url(); ?>admin/employee">Employee</a>
+          <a class="nav-item nav-link active" href="<?php echo site_url(); ?>admin/mentor">Mentor</a>
+          <a class="nav-item nav-link active" href="<?= site_url('login/logout') ?>">Logout</a>
         <?php else : ?>
           <li class="nav-item dropdown">
             <a class="dropdown-toggle nav-link active" href="#" role="button" id="#myprofile-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

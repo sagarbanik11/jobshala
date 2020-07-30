@@ -55,8 +55,14 @@
             <?php elseif($r->jstatus==2):?>
             <p class="mb-1">Rejected</p>
         <?php endif?>
+<<<<<<< HEAD
         <?php }?>
         </div>
+=======
+      
+      
+    </a>
+>>>>>>> 5b85f30620560ac6cfc87f2dd1a42936f416dbe5
     </div>
     <hr>
     <div class="row">
@@ -80,8 +86,12 @@
         </div>
         </form>
     <?php endif?>
+<<<<<<< HEAD
     </div>
     </div>
 
    
+=======
+    <?php }?>
+>>>>>>> 5b85f30620560ac6cfc87f2dd1a42936f416dbe5
 </div>

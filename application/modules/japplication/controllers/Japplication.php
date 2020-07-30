@@ -36,6 +36,7 @@ class Japplication extends MX_Controller
 	}
 	public function save()
 	{
+<<<<<<< HEAD
 		$data['j_id'] = $_POST['jid'];
 		$data['u_id'] = $this->session->userdata['u_id'];
 		$data['name'] = $_POST['name'];
@@ -56,6 +57,28 @@ class Japplication extends MX_Controller
 		$data['website'] = $_POST['website'];
 		$data['adate'] = date('Y-m-d H:i:s');
 		$data['jstatus'] = 0;
+=======
+		$data['j_id']=$_POST['jid'];
+		$data['u_id']=$this->session->userdata['u_id'];
+		$data['name']=$_POST['name'];
+		$data['email']=$_POST['email'];
+		$data['mobile']=$_POST['mobile'];
+		$data['profession']=$_POST['profession'];
+		$data['bio']=$_POST['bio'];
+		$data['address']=$_POST['address'];
+		$data['skills']=$_POST['skills'];
+		$data['hqualification']=$_POST['hqualification'];
+		$data['institute']=$_POST['institute'];
+		$data['stream']=$_POST['stream'];
+		$data['passout']=$_POST['passout'];
+		$data['marks']=$_POST['marks'];
+		$data['dob']=$_POST['dob'];
+		$data['experience']=$_POST['experience'];
+		$data['gender']=$_POST['gender'];
+		$data['website']=$_POST['website'];
+		$data['adate']=date('Y-m-d H:i:s');
+		$data['jstatus']=0;
+>>>>>>> 5b85f30620560ac6cfc87f2dd1a42936f416dbe5
 
 		$this->mdl_japplication->apply($data);
 		$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">

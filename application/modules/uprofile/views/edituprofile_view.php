@@ -84,7 +84,7 @@
             <label for="passout" class="cols-sm-2 control-label">Pass Out Year</label>
             <div class="cols-sm-10">
               <div class="input-group">
-                <input type="date" class="form-control" name="passout" id="passout" value="<?= $r->passout?>"  placeholder="Enter Pass Out Year">
+                <input type="date" class="form-control" name="passout" id="passout" value="<?= $r->passout?>"  placeholder="Enter Pass Out Year" required>
               </div>
             </div>
           </div>

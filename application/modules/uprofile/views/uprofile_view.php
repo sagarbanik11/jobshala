@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="col-md-2">
-                    <button onclick="window.location.href='<?php echo site_url(); ?>uprofile/editview'" type="button" class="btn btn-dark float-right">Edit Profile</button>
+                    <button onclick="window.location.href='<?php echo site_url(); ?>uprofile/editview'" type="button" class="btn btn-outline-secondary float-right">Edit Profile</button>
                 </div>
 
         </div>
@@ -51,10 +51,10 @@
 
         <div class="row">
             <div class="col-md-4">
-                <div class="profile-work">
-                    <p>LinkedIn</p>
-                    <a href="<?= $r->website ?>"><?= $r->website ?></a><br />
-                    <p>SKILLS</p>
+                <div class="profile-work ">
+                    <p>Website</p>
+                    <a href="<?= $r->website ?>">View <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a><br />
+                    <p>Skills</p>
                     <?= $r->skills ?>
 
                 </div>
@@ -88,7 +88,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <label>DOB</label>
+                                <label>Date of Birth</label>
                             </div>
                             <div class="col-md-6">
                                 <p><?= $r->dob ?></p>
@@ -117,7 +117,7 @@
                                 <label>Experience</label>
                             </div>
                             <div class="col-md-6">
-                                <p><?= $r->experience ?> Year</p>
+                                <p><?php if($r->experience == NULL): echo "0"; else: echo $r->experience."years"; endif  ?></p>
                             </div>
                         </div>
                         <div class="row">
@@ -128,33 +128,10 @@
                                 <p><?= $r->address ?></p>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Total Projects</label>
-                            </div>
-                            <div class="col-md-6">
-                                <p>230</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>English Level</label>
-                            </div>
-                            <div class="col-md-6">
-                                <p>Expert</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Availability</label>
-                            </div>
-                            <div class="col-md-6">
-                                <p>6 months</p>
-                            </div>
-                        </div>
+                        
                         <div class="row">
                             <div class="col-md-12">
-                                <label>Your Bio</label><br />
+                                <label>Biography</label><br />
                                 <p><?= $r->bio ?></p>
                             </div>
                         </div>
@@ -162,7 +139,7 @@
                     <div class="tab-pane fade" id="education" role="tabpanel" aria-labelledby="education-tab">
                         <div class="row">
                             <div class="col-md-6">
-                                <label>Higher Qualification</label>
+                                <label>Highest Qualification</label>
                             </div>
                             <div class="col-md-6">
                                 <p><?= $r->hqualification ?></p>
@@ -206,6 +183,6 @@
         <?php } ?>
         </div>
     </form>
-    <button onclick="window.location.href='<?php echo site_url(); ?>uprofile/pdf'" type="button" class="btn btn-info float-right">Export Porfolio <i class="fa fa-download" aria-hidden="true"></i></button>
+    <a href="<?=site_url();?>uprofile/pdf" target="_blank" type="button" class="btn btn-info float-right" style="color:white">Export Porfolio <i class="fa fa-download" aria-hidden="true"></i></a>
 
 </div>

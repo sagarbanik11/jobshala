@@ -47,7 +47,21 @@ class Uprofile extends MX_Controller {
 		$data['website']=$_POST['website'];
 
 		$this->mdl_uprofile->update($data);
-		$this->session->set_flashdata('msg', '<b style="color:green;">Profile Updated successfully!</b>');
+		$this->session->set_flashdata('msg', '<div class="alert alert-success" id="msg_alert" role="alert">
+		Profile Updated Successfully..
+		<span class="float-right" onclick="close_alert()">&times;</span>
+		<style>
+				.float-right{
+						cursor:pointer;
+				}
+		</style>
+		<script>
+				function close_alert(){
+						document.querySelector("#msg_alert").style.display="none";
+				}
+		</script>
+
+	</div>');
 		redirect('uprofile');
 	}
 

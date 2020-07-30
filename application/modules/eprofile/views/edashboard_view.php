@@ -1,15 +1,15 @@
-<div class="container">
- <legend >Company Job List</legend>
+<div class="container" style="margin-top:100px">
+<h5 style="font-weight:600;">Opportunities in <?= $_SESSION['name'] ?></h5>
  
  <?php echo $this->session->flashdata('msg'); ?>
- <button onclick="window.location.href='<?php echo site_url(); ?>addjob'" type="button" class="btn btn-dark float-right">Add Job</button>
+ <button onclick="window.location.href='<?php echo site_url(); ?>addjob'" type="button" class="btn btn-outline-info float-right">Add Job</button>
 <br><br>
-    <table class="table table-hover table-bordered content_table">
+    <table class="table table-hover  content_table">
       <thead>
           <tr>
             <th scope="col">Job Id</th>
             <th scope="col">Role</th>
-            <th scope="col">Post Date</th>
+            <th scope="col">Date Posted</th>
             <th scope="col">Sector</th>
             <th scope="col">Status</th>
             <th scope="col">Action</th>

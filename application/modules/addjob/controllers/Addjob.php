@@ -40,7 +40,21 @@ class Addjob extends MX_Controller {
 			$data['status']=1;
 
 			$id=$this->mdl_addjob->add($data);
-			$this->session->set_flashdata('msg', '<b style="color:green;">Job added successfully!</b>');
+			$this->session->set_flashdata('msg', '<div class="alert alert-success" id="msg_alert" role="alert">
+			Job Added Successfully.
+			<span class="float-right" onclick="close_alert()">&times;</span>
+			<style>
+					.float-right{
+							cursor:pointer;
+					}
+			</style>
+			<script>
+					function close_alert(){
+							document.querySelector("#msg_alert").style.display="none";
+					}
+			</script>
+
+		</div>');
 			redirect('eprofile/dashboard');
 	}
 	public function edit()
@@ -54,7 +68,21 @@ class Addjob extends MX_Controller {
 			$data['status']=$_POST['status'];
 
 			$this->mdl_addjob->update($data,$id);
-			$this->session->set_flashdata('msg', '<b style="color:green;">Job updated successfully!</b>');
+			$this->session->set_flashdata('msg', '<div class="alert alert-success" id="msg_alert" role="alert">
+			Job updated Successfully.
+			<span class="float-right" onclick="close_alert()">&times;</span>
+			<style>
+					.float-right{
+							cursor:pointer;
+					}
+			</style>
+			<script>
+					function close_alert(){
+							document.querySelector("#msg_alert").style.display="none";
+					}
+			</script>
+
+		</div>');
 			redirect('eprofile/dashboard');
 					
 	}

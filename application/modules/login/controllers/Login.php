@@ -32,7 +32,21 @@ class Login extends MX_Controller {
                 }
                
             } else {
-                $this->session->set_flashdata('flash_data', '<b style="color:red;">Username or password is wrong!</b>');
+                $this->session->set_flashdata('msg', '<div class="alert alert-danger" id="msg_alert" role="alert">
+                Please check the email/password once again.
+                <span class="float-right" onclick="close_alert()">&times;</span>
+                <style>
+                    .float-right{
+                        cursor:pointer;
+                    }
+                </style>
+                <script>
+                    function close_alert(){
+                        document.querySelector("#msg_alert").style.display="none";
+                    }
+                </script>
+
+              </div>');
                 redirect('login');
             }
         }

@@ -1,10 +1,10 @@
-<div class="container">
- <legend >Submitted Applications</legend>
+<div class="container" style="margin-top: 80px;">
+ <h5 style="font-family: 700;" >Submitted Applications</h5>
  
  <?php echo $this->session->flashdata('msg'); ?>
 <br><br>
-    <table class="table table-hover table-bordered content_table">
-      <thead>
+    <table class="table table-hover  content_table">
+      <thead class="thead-light">
           <tr>
             <th scope="col">Job Id</th>
             <th scope="col">Role</th>

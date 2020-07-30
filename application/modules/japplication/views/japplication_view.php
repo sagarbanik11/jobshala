@@ -6,6 +6,7 @@
         <fieldset>
         <?php foreach ($qry->result() as $r){?>
           <legend >Application for <?= $r->role?></legend>
+          <hr>
           <input name="jid" id="jid" value="<?= $r->j_id?>" hidden>
         <?php }?>
           <?php foreach ($data->result() as $r){?>
@@ -146,7 +147,7 @@
           </div>
           <?php }?>
           <div class="form-group ">
-            <button type="submit" class="btn btn-dark">Submit</button>
+            <button type="submit" class="btn btn-block btn-info">Apply for the job</button>
           </div>
           <?php echo $this->session->flashdata('msg'); ?>
         </fieldset>

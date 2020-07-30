@@ -37,7 +37,21 @@ class Scapplication extends MX_Controller {
 			$jobid=$_POST['jobid'];
 			$data['jstatus']=$_POST['status'];
 			$this->mdl_scapplication->update($data,$jobid);
-			$this->session->set_flashdata('msg', '<b style="color:green;">Status updated successfully!</b>');
+			$this->session->set_flashdata('msg', '<div class="alert alert-success" id="msg_alert" role="alert">
+			Status changed.
+			<span class="float-right" onclick="close_alert()">&times;</span>
+			<style>
+					.float-right{
+							cursor:pointer;
+					}
+			</style>
+			<script>
+					function close_alert(){
+							document.querySelector("#msg_alert").style.display="none";
+					}
+			</script>
+
+		</div>');
 			redirect('scapplication');
 					
 		

@@ -1,14 +1,14 @@
-<div class="container">
+<div class="container" style="margin-top:100px">
  <legend >Applications</legend>
  
  <?php echo $this->session->flashdata('msg'); ?>
 <br><br>
-    <table class="table table-hover table-bordered content_table">
+    <table class="table table-hover table-responsive  content_table">
       <thead>
           <tr>
             <th scope="col">Job Id</th>
             <th scope="col">Role</th>
-            <th scope="col">Apply Date</th>
+            <th scope="col">Date Applied</th>
             <th scope="col">Candidate Name</th>
             <th scope="col">Email</th>
             <th scope="col">Mobile No</th>

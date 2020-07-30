@@ -1,8 +1,16 @@
-<div class="container">
-    <div class="list-group">
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+<style>
+#single-application{
+    font-size: 14px;
+}
+</style>
+
+
+<div class="container" style="margin-top:70px" id="single-application">
+        <h5>Applicant's Details</h5><hr>
+    <div class="row">
     <?php foreach ($data->result() as $r){?>
-       
+
+        <div class="col-md-6">
         <b class="mb-1">Name</b>
         <p class="mb-1"><?= $r->name?></p>
         <b class="mb-1">Email</b>
@@ -11,13 +19,17 @@
         <p class="mb-1"><?= $r->mobile?></p>
         <b class="mb-1">Profession</b>
         <p class="mb-1"><?= $r->profession?></p>
-        <b class="mb-1">Bio</b>
+        <b class="mb-1">About Me</b>
         <p class="mb-1"><?= $r->bio?></p>
         <b class="mb-1">Address</b>
         <p class="mb-1"><?= $r->address?></p>
         <b class="mb-1">Skills</b>
         <p class="mb-1"><?= $r->skills?></p>
-        <b class="mb-1">Higher Qualifications</b>
+
+
+        </div>
+        <div class="col-md-6">
+        <b class="mb-1">Highest Qualifications</b>
         <p class="mb-1"><?= $r->hqualification?></p>
         <b class="mb-1">School/University</b>
         <p class="mb-1"><?= $r->institute?></p>
@@ -27,12 +39,12 @@
         <p class="mb-1"><?= $r->passout?></p>
         <b class="mb-1">Marks</b>
         <p class="mb-1"><?= $r->marks?></p>
-        <b class="mb-1">DOB</b>
+        <b class="mb-1">Date of Birth</b>
         <p class="mb-1"><?= $r->dob?></p>
         <b class="mb-1">Gender</b>
         <p class="mb-1"><?= $r->gender?></p>
         <b class="mb-1">Website</b>
-        <p class="mb-1"><?= $r->website?></p>
+        <p class="mb-1"><a href="<?= $r->website?>" target="_blank">Click here to view <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></p>
         <b class="mb-1">Application Date</b>
         <p class="mb-1"><?= $r->adate?></p>
         <b class="mb-1">Status</b>
@@ -44,13 +56,15 @@
             <p class="mb-1">Rejected</p>
         <?php endif?>
         <?php }?>
-      
-    </a>
+        </div>
     </div>
+    <hr>
+    <div class="row">
+    <div class="col-md-6 offset-md-4">
     <?php if ($this->session->userdata['authorization'] == 1):?>
         <form class="form-horizontal" action="<?=site_url('scapplication/status')?>" method="post"><br>
 
-        <label for="status" class="cols-sm-2 control-label">Action</label>
+        <label for="status" class="cols-sm-2 control-label">Change Status</label>
         <input name="jobid" id="jobid" value='<?= $r->ja_id?>' hidden>	
             <div class="cols-sm-10">
                 <div class="input-group" style="width: 50%;">
@@ -62,8 +76,12 @@
             </div>
         <br>
         <div class="form-group ">
-        <button type="submit" onclick="return Validate()" class="btn btn-dark">Submit</button>
+        <button type="submit" onclick="return Validate()" class="btn  btn-info">Submit</button>
         </div>
         </form>
     <?php endif?>
+    </div>
+    </div>
+
+   
 </div>

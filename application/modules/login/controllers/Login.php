@@ -18,10 +18,11 @@ class Login extends MX_Controller {
                     'email' => $result->email,
                     'authorization'=>$result->authorization,
                     'name'=>$result->name,
+                    'status'=>$result->status,
                 ];
  
                 $this->session->set_userdata($data);
-                if($this->session->userdata['authorization']==1){
+                if($this->session->userdata['authorization']==1 && $_SESSION['status']==1){
                     redirect('eprofile');
                 }
                 elseif($this->session->userdata['authorization']==2){
@@ -30,6 +31,15 @@ class Login extends MX_Controller {
                 elseif($this->session->userdata['authorization']==3){
                     redirect('mprofile');
                 }
+                elseif($this->session->userdata['authorization']==0){
+                    redirect('admin');
+                }
+                elseif($this->session->userdata['status']==0){
+                    redirect('login/pending');
+                }
+                elseif($this->session->userdata['status']==2){
+                redirect('login/declined');
+            }
                
             } else {
                 $this->session->set_flashdata('flash_data', '<b style="color:red;">Username or password is wrong!</b>');
@@ -37,6 +47,23 @@ class Login extends MX_Controller {
             }
         }
     }
+    public function pending()
+	{
+
+        $data = $this->session->all_userdata();
+        $this->session->unset_userdata($data);
+        $this->session->sess_destroy();
+
+		$this->load->view('login/pending_view');
+    }
+    public function declined()
+	{
+        $data = $this->session->all_userdata();
+        $this->session->unset_userdata($data);
+        $this->session->sess_destroy();
+
+		$this->load->view('login/declined_view');
+	}
     public function logout()  
     {  
         $data = $this->session->all_userdata();

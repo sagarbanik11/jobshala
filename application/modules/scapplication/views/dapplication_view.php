@@ -43,7 +43,7 @@
             <?php elseif($r->jstatus==2):?>
             <p class="mb-1">Rejected</p>
         <?php endif?>
-        <?php }?>
+      
       
     </a>
     </div>
@@ -66,4 +66,5 @@
         </div>
         </form>
     <?php endif?>
+    <?php }?>
 </div>

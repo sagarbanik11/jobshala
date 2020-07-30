@@ -9,7 +9,6 @@ class Eprofile extends MX_Controller {
 		redirect('home');
 		}
 	
-
 	public function index()
 	{
 

@@ -37,7 +37,8 @@ class User_Register extends MX_Controller {
 			$data['email']=$_POST['email'];
 			$data['mobile']=$_POST['mobile'];
 			$data['password']=md5($_POST['password']);
-			$data['authorization']=$_POST['auth']; 
+			$data['authorization']=$_POST['auth'];
+			$data['status']=1;  
 		
 
 			$data1['u_id']=$this->mdl_user_register->add($data);

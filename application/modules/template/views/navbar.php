@@ -34,6 +34,12 @@
           <a class="nav-item nav-link active" href="<?php echo site_url(); ?>addjob">Add Job</a>
           <a class="nav-item nav-link active" href="<?php echo site_url(); ?>scapplication">Applications</a>
           <a class="nav-item nav-link active" href="<?= site_url('login/logout') ?>">Logout</a>
+        <?php elseif ($this->session->userdata['authorization'] == 0) : ?>
+          <a class="nav-item nav-link active" href="<?php echo site_url(); ?>admin">Dashbaord</a>
+          <a class="nav-item nav-link active" href="<?php echo site_url(); ?>admin/employeer">Employeer</a>
+          <a class="nav-item nav-link active" href="<?php echo site_url(); ?>admin/employee">Employee</a>
+          <a class="nav-item nav-link active" href="<?php echo site_url(); ?>admin/mentor">Mentor</a>
+          <a class="nav-item nav-link active" href="<?= site_url('login/logout') ?>">Logout</a>
         <?php else : ?>
           <a class="nav-item nav-link active" href="<?php echo site_url(); ?>japplication/allview">Applications</a>
           <a class="nav-item nav-link active" href="<?= site_url('login/logout') ?>">Logout</a>

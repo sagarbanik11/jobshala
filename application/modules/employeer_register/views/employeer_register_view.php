@@ -1,16 +1,15 @@
-
 <div class="container">
 	<div class="row justify-content-center">
 		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 ">
-			<form class="form-horizontal" action="<?=site_url('employeer_register/save')?>" method="post"><br>
+			<form class="form-horizontal" action="<?= site_url('employeer_register/save') ?>" method="post"><br>
 				<fieldset>
-					<legend >Employeer Signup</legend>			
+					<legend>Employeer Signup</legend>
 					<div class="form-group">
 						<label for="name" class="cols-sm-2 control-label">Company Name</label>
 						<div class="cols-sm-10">
 							<div class="input-group">
-								<input type="text" class="form-control" name="auth" id="auth" value='1' hidden>	
-								<input type="text" class="form-control" name="name" id="name"  placeholder="Enter Company Name" required>
+								<input type="text" class="form-control" name="auth" id="auth" value='1' hidden>
+								<input type="text" class="form-control" name="name" id="name" placeholder="Enter Company Name" required>
 							</div>
 						</div>
 					</div>
@@ -18,7 +17,7 @@
 						<label for="email" class="cols-sm-2 control-label">Official Email</label>
 						<div class="cols-sm-10">
 							<div class="input-group">
-								<input type="email" class="form-control" name="email" id="email"  placeholder="Enter Official Email" required>
+								<input type="email" class="form-control" name="email" id="email" placeholder="Enter Official Email" required>
 							</div>
 						</div>
 						<?php echo form_error('email', '<div class="error">', '</div>'); ?>
@@ -28,7 +27,7 @@
 						<label for="username" class="cols-sm-2 control-label">Mobile No</label>
 						<div class="cols-sm-10">
 							<div class="input-group">
-								<input type="text" class="form-control" name="mobile" id="mobile"  placeholder="Enter Mobile No" required>
+								<input type="text" class="form-control" name="mobile" id="mobile" placeholder="Enter Mobile No" required>
 							</div>
 						</div>
 						<?php echo form_error('mobile', '<div class="error">', '</div>'); ?>
@@ -50,19 +49,23 @@
 						<div class="cols-sm-10">
 							<div class="input-group">
 								<select id="industry" name="industry" class="custom-select">
-									<option value="IT" selected>Example 1</option>
-									<option value="Agriculture">Example 2</option>
+									<option value="Agriculture">Agriculture</option>
+									<option value="Beauty">Beauty and Wellness</option>
+									<option value="Automotive">Automotive</option>
+									<option value="Construction">Construction</option>
+									<option value="IT">Information Technology (IT)</option>
+									<option value="Life Sciences">Life Sciences</option>
 								</select>
 							</div>
 						</div>
 					</div>
-		
+
 
 					<div class="form-group">
 						<label for="password" class="cols-sm-2 control-label">Password</label>
 						<div class="cols-sm-10">
 							<div class="input-group">
-								<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password" required>
+								<input type="password" class="form-control" name="password" id="password" placeholder="Enter your Password" required>
 							</div>
 						</div>
 					</div>
@@ -71,7 +74,7 @@
 						<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
 						<div class="cols-sm-10">
 							<div class="input-group">
-								<input type="password" class="form-control" name="confirmpassword" id="confirmpassword"  placeholder="Confirm your Password" required>
+								<input type="password" class="form-control" name="confirmpassword" id="confirmpassword" placeholder="Confirm your Password" required>
 							</div>
 						</div>
 						<?php echo form_error('confirmpassword', '<div class="error">', '</div>'); ?>
@@ -80,28 +83,27 @@
 					<div class="form-group ">
 						<button type="submit" onclick="return Validate()" class="btn btn-dark">SignUp</button>
 					</div>
-				</fieldset>	
+				</fieldset>
 			</form>
 		</div>
 	</div>
-</div>  
+</div>
 </div>
 
 <style>
-.error{
-    color:red;
-    
-}
+	.error {
+		color: red;
+
+	}
 </style>
 <script type="text/javascript">
-          
 	function Validate() {
 		var password = document.getElementById("password").value;
 		var confirmPassword = document.getElementById("confirmpassword").value;
 		if (password != confirmPassword) {
 			document.getElementById('confirmpassword').style.borderColor = "red";
 			alert("Password do not match.");
-			
+
 			return false;
 		}
 	}

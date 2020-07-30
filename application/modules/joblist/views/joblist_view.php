@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" style="margin-top: 70px;">
  <legend >Job List</legend>
  
  <div class="list-group">
@@ -9,7 +9,7 @@
       <small><?= $r->date?></small>
     </div>
     <p class="mb-1"><?= $r->name?></p>
-    <small><?= $r->location?></small>
+    <small><i class="fa fa-map-marker" aria-hidden="true"></i> <?= $r->location?></small>
     <button onclick="window.location.href='<?php echo site_url(); ?>joblist/single/<?= $r->j_id?>'" type="button" class="btn btn-dark float-right">View More</button>
   </a>
   <?php }?>

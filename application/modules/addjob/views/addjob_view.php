@@ -33,10 +33,14 @@
             <label for="industry" class="cols-sm-2 control-label">Industry</label>
             <div class="cols-sm-10">
               <div class="input-group">
-                <select id="industry" name="industry" class="custom-select">
-                  <option value="IT" selected>IT</option>
-                  <option value="Marketing">Marketing</option>
-                </select>
+              <select id="industry" name="industry" class="custom-select">
+									<option value="Agriculture">Agriculture</option>
+									<option value="Beauty">Beauty and Wellness</option>
+									<option value="Automotive">Automotive</option>
+									<option value="Construction">Construction</option>
+									<option value="IT">Information Technology (IT)</option>
+									<option value="Life Sciences">Life Sciences</option>
+								</select>
               </div>
             </div>
           </div>

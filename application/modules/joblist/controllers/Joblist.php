@@ -20,6 +20,20 @@ class Joblist extends MX_Controller {
 		$val['file']='joblist/joblist_view';
 		echo Modules::run('template/layout1',$val);
 	}
+	public function otherjobs()
+	{
+
+                $val['file']='joblist/otherjobs_view';
+                echo Modules::run('template/layout1',$val);
+	}
+
+        public function otherjob_list()
+        {
+
+                $val['file']='joblist/otherjob_list';
+                echo Modules::run('template/layout1',$val);
+        }
+
 	public function single()
 	{
 
@@ -72,3 +86,4 @@ class Joblist extends MX_Controller {
 
 	
 }
+

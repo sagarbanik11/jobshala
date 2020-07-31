@@ -13,7 +13,8 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
       <div class="navbar-nav ">
           <a class="nav-item nav-link active" href="<?= site_url('joblist') ?>">Job List</a>
-          <a class="nav-item nav-link active" href="<?= site_url('home') ?>">Opportunities</a>
+	  <a class="nav-item nav-link active" href="<?= site_url('joblist/otherjobs') ?>">Other Jobs</a>
+	  <a class="nav-item nav-link active" href="<?= site_url('home') ?>">Opportunities</a>
           <a class="nav-item nav-link active" href="<?= site_url('tenders') ?>">Tenders</a>
           <a class="nav-item nav-link active" href="<?= site_url('skills') ?>">Skills</a>
         <?php if (!isset($_SESSION['u_id'])) : ?>

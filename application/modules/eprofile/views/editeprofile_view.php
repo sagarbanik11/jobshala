@@ -7,24 +7,6 @@
           <legend >Edit Profile</legend>
           <?php foreach ($data->result() as $r){?>
           <div class="form-group">
-						<label for="email" class="cols-sm-2 control-label">Email</label>
-						<div class="cols-sm-10">
-							<div class="input-group">
-								<input type="email" class="form-control" name="email" id="email" value="<?= $r->email?>" placeholder="Enter your official Email" required>
-							</div>
-							<?php echo form_error('email', '<div class="error">', '</div>'); ?>
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="username" class="cols-sm-2 control-label">Mobile No</label>
-						<div class="cols-sm-10">
-							<div class="input-group">
-								<input type="text" class="form-control" name="mobile" id="mobile" value="<?= $r->mobile?>" placeholder="Enter Your Mobile No" required>
-							</div>
-						</div>
-						<?php echo form_error('mobile', '<div class="error">', '</div>'); ?>
-					</div>
-          <div class="form-group">
             <label for="about" class="cols-sm-2 control-label">About Company</label>
             <div class="cols-sm-10">
               <div class="input-group">

@@ -14,7 +14,7 @@
 						<label for="name" class="cols-sm-2 control-label">Name</label>
               <div class="cols-sm-10">
                 <div class="input-group">
-                  <input type="text" class="form-control" name="name" id="name" value="<?= $_SESSION['name']?>" placeholder="Enter Your Name" required>
+                  <input type="text" class="form-control" name="name" id="name" value="<?= $_SESSION['name']?>"  required>
                 </div>
                 <?php echo form_error('email', '<div class="error">', '</div>'); ?>
               </div>
@@ -23,7 +23,7 @@
 						<label for="email" class="cols-sm-2 control-label">Email</label>
 						<div class="cols-sm-10">
 							<div class="input-group">
-								<input type="email" class="form-control" name="email" id="email" value="<?= $r->email?>" placeholder="Enter your Email" required>
+								<input type="email" class="form-control" name="email" id="email" value="<?= $r->email?>"  required>
 							</div>
 							<?php echo form_error('email', '<div class="error">', '</div>'); ?>
 						</div>
@@ -32,7 +32,7 @@
 						<label for="username" class="cols-sm-2 control-label">Mobile No</label>
 						<div class="cols-sm-10">
 							<div class="input-group">
-								<input type="text" class="form-control" name="mobile" id="mobile" value="<?= $r->mobile?>" placeholder="Enter Your Mobile No" required>
+								<input type="text" class="form-control" name="mobile" id="mobile" value="<?= $r->mobile?>" required>
 							</div>
 						</div>
 						<?php echo form_error('mobile', '<div class="error">', '</div>'); ?>
@@ -41,7 +41,7 @@
             <label for="bio" class="cols-sm-2 control-label">Bio</label>
             <div class="cols-sm-10">
               <div class="input-group">
-              <textarea name="bio" id="bio" class="form-control" placeholder="Enter Your Bio"><?= $r->bio?></textarea>
+              <textarea name="bio" id="bio" class="form-control" ><?= $r->bio?></textarea>
               </div>
             </div>
           </div>		
@@ -49,7 +49,7 @@
             <label for="profession" class="cols-sm-2 control-label">Profession</label>
             <div class="cols-sm-10">
               <div class="input-group">
-                <input type="text" class="form-control" name="profession" id="profession" value="<?= $r->profession?>" placeholder="Enter Your Profession" required> 
+                <input type="text" class="form-control" name="profession" id="profession" value="<?= $r->profession?>"  required> 
               </div>
             </div>
           </div>
@@ -57,15 +57,15 @@
             <label for="address" class="cols-sm-2 control-label">Address</label>
             <div class="cols-sm-10">
               <div class="input-group">
-              <textarea name="address" id="address" class="form-control" placeholder="Enter Your Address"><?= $r->address?></textarea>
+              <textarea name="address" id="address" class="form-control" ><?= $r->address?></textarea>
               </div>
             </div>
           </div>		
           <div class="form-group">
-            <label for="skills" class="cols-sm-2 control-label">Skills</label>
+            <label for="skills" class="cols-sm-2 control-label">Enter Skills <small>(separated by comma)</small></label>
             <div class="cols-sm-10">
               <div class="input-group">
-                <input type="text" class="form-control" name="skills" id="skills" value="<?= $r->skills?>"  placeholder="Enter Skills, separated by comma">
+                <input type="text" class="form-control" name="skills" id="skills" value="<?= $r->skills?>"  >
               </div>
             </div>
           </div>
@@ -73,7 +73,7 @@
             <label for="hqualification" class="cols-sm-2 control-label">Higher Qualification</label>
             <div class="cols-sm-10">
               <div class="input-group">
-                <input type="text" class="form-control" name="hqualification" id="hqualification" value="<?= $r->hqualification?>" placeholder="Enter Your Higher Qualification">
+                <input type="text" class="form-control" name="hqualification" id="hqualification" value="<?= $r->hqualification?>" >
               </div>
             </div>
           </div>
@@ -81,7 +81,7 @@
             <label for="institute" class="cols-sm-2 control-label">School/University</label>
             <div class="cols-sm-10">
               <div class="input-group">
-                <input type="text" class="form-control" name="institute" id="institute" value="<?= $r->institute?>" placeholder="Enter Your School/University Name">
+                <input type="text" class="form-control" name="institute" id="institute" value="<?= $r->institute?>" >
               </div>
             </div>
           </div>
@@ -89,7 +89,7 @@
             <label for="stream" class="cols-sm-2 control-label">Stream</label>
             <div class="cols-sm-10">
               <div class="input-group">
-                <input type="text" class="form-control" name="stream" id="stream" value="<?= $r->stream?>" placeholder="Enter Your Stream">
+                <input type="text" class="form-control" name="stream" id="stream" value="<?= $r->stream?>" >
               </div>
             </div>
           </div>
@@ -97,7 +97,7 @@
             <label for="passout" class="cols-sm-2 control-label">Pass Out Year</label>
             <div class="cols-sm-10">
               <div class="input-group">
-                <input type="date" class="form-control" name="passout" id="passout" value="<?= $r->passout?>"  placeholder="Enter Pass Out Year">
+                <input type="date" class="form-control" name="passout" id="passout" value="<?= $r->passout?>"  >
               </div>
             </div>
           </div>
@@ -105,7 +105,7 @@
             <label for="marks" class="cols-sm-2 control-label">GPA/Percentage</label>
             <div class="cols-sm-10">
               <div class="input-group">
-                <input type="text" class="form-control" name="marks" id="marks" value="<?= $r->marks?>" placeholder="Enter Your Marks">
+                <input type="text" class="form-control" name="marks" id="marks" value="<?= $r->marks?>" >
               </div>
             </div>
           </div>
@@ -113,7 +113,7 @@
             <label for="dob" class="cols-sm-2 control-label">DOB</label>
             <div class="cols-sm-10">
               <div class="input-group">
-                <input type="date" class="form-control" name="dob" id="dob" value="<?= $r->dob?>"  placeholder="Enter Your DOB" required>
+                <input type="date" class="form-control" name="dob" id="dob" value="<?= $r->dob?>"   required>
               </div>
             </div>
           </div>
@@ -121,7 +121,7 @@
             <label for="experience" class="cols-sm-2 control-label">Experience</label>
             <div class="cols-sm-10">
               <div class="input-group">
-                <input type="text" class="form-control" name="experience" id="experience" value="<?= $r->experience?>" placeholder="Experience">
+                <input type="text" class="form-control" name="experience" id="experience" value="<?= $r->experience?>" >
               </div>
             </div>
           </div>
@@ -141,7 +141,7 @@
             <label for="website" class="cols-sm-2 control-label">LinkedIn Link</label>
             <div class="cols-sm-10">
               <div class="input-group">
-                <input type="text" class="form-control" name="website" id="website" value="<?= $r->website?>" placeholder="Enter Linkedin Link" required>
+                <input type="text" class="form-control" name="website" id="website" value="<?= $r->website?>"  required>
               </div>
             </div>
           </div>

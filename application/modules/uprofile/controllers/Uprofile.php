@@ -30,8 +30,8 @@ class Uprofile extends MX_Controller {
 	{
  
 		
-		$data['email']=$_POST['email'];
-		$data['mobile']=$_POST['mobile'];
+		// $data['email']=$_POST['email'];
+		// $data['mobile']=$_POST['mobile'];
 		$data['profession']=$_POST['profession'];
 		$data['bio']=$_POST['bio'];
 		$data['address']=$_POST['address'];

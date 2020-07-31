@@ -44,7 +44,7 @@
               <li class="list-group-item"><small>Industry<br><?= $r->industry?></small></li>
               <li class="list-group-item"><small>Status
               <div id="status-text">
-              <?php if($r->status == 1): echo "Applications Open"; 
+              <?php if($r->jlstatus == 1): echo "Applications Open"; 
                 else: echo "Closed"; ?></div>
                 
                 <?php endif?></small></li>

@@ -86,4 +86,3 @@ class Joblist extends MX_Controller {
 
 	
 }
-

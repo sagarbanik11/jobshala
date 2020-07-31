@@ -130,7 +130,6 @@
                                 <p><?= $r->address ?></p>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-md-12">
                                 <label>Biography</label><br />

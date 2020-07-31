@@ -13,6 +13,7 @@ class Addjob extends MX_Controller {
 	public function index()
 	{
 
+		$val['industry']=$this->db->get('industry');
 		$this->db->where('u_id',$this->session->userdata('u_id'));
 		$val['jobs']=$this->db->get('joblist');
 		$val['file']='addjob/addjob_view';
@@ -29,7 +30,23 @@ class Addjob extends MX_Controller {
 	}
 	public function add()
 	{	
-			$data['u_id']=$this->session->userdata['u_id'];
+
+		$this->load->library('form_validation'); 
+		$this->form_validation->set_rules('jid','Job Id','required');
+		$this->form_validation->set_rules('role','Role','required');
+		$this->form_validation->set_rules('location','Location','required');
+		$this->form_validation->set_rules('industry','Industry','required');
+		$this->form_validation->set_rules('description','Job Description','required');
+		$this->form_validation->set_rules('requirement','Name','required');
+	
+		if ($this->form_validation->run() == FALSE)
+		{
+			
+			$this->index();
+		}
+		else
+		{
+		    $data['u_id']=$this->session->userdata['u_id'];
 			$data['job_id']=$_POST['jid'];
 			$data['role']=$_POST['role'];
 			$data['location']=$_POST['location'];
@@ -37,7 +54,7 @@ class Addjob extends MX_Controller {
 			$data['jdescription']=$_POST['description'];
 			$data['jrequirement']=$_POST['requirement'];
 			$data['date']= date('d-m-Y');
-			$data['status']=1;
+			$data['jlstatus']=1;
 
 			$id=$this->mdl_addjob->add($data);
 			$this->session->set_flashdata('msg', '<div class="alert alert-success" id="msg_alert" role="alert">
@@ -56,16 +73,38 @@ class Addjob extends MX_Controller {
 
 		</div>');
 			redirect('eprofile/dashboard');
+
+		}
 	}
+
+
+
+
+		
 	public function edit()
 	{	
+
+		$this->load->library('form_validation'); 
+		$this->form_validation->set_rules('jid','Job Id','required');
+		$this->form_validation->set_rules('role','Role','required');
+		$this->form_validation->set_rules('location','Location','required');
+		$this->form_validation->set_rules('description','Job Description','required');
+		$this->form_validation->set_rules('requirement','Name','required');
+	
+		if ($this->form_validation->run() == FALSE)
+		{
+			
+			$this->index();
+		}
+		else
+		{
 			$id=$_POST['jid'];
 			$data['job_id']=$_POST['job_id'];
 			$data['role']=$_POST['role'];
 			$data['location']=$_POST['location'];
 			$data['jdescription']=$_POST['description'];
 			$data['jrequirement']=$_POST['requirement'];
-			$data['status']=$_POST['status'];
+			$data['jlstatus']=$_POST['status'];
 
 			$this->mdl_addjob->update($data,$id);
 			$this->session->set_flashdata('msg', '<div class="alert alert-success" id="msg_alert" role="alert">
@@ -85,7 +124,11 @@ class Addjob extends MX_Controller {
 		</div>');
 			redirect('eprofile/dashboard');
 					
+
+		}
 	}
+
+
 
 	
 }

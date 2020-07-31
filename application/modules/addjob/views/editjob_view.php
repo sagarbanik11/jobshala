@@ -13,6 +13,7 @@
               <div class="input-group">
                 <input type="text" class="form-control" name="job_id" id="job_id" value="<?= $r->job_id ?>" placeholder="Enter Job Id" required>
               </div>
+              <?php echo form_error('jid', '<div class="error">', '</div>'); ?>		
             </div>
           </div>		
           <div class="form-group">
@@ -21,6 +22,7 @@
               <div class="input-group">
                 <input type="text" class="form-control" name="role" id="role" value="<?= $r->role ?>" placeholder="Enter Job Role" required>
               </div>
+              <?php echo form_error('role', '<div class="error">', '</div>'); ?>		
             </div>
           </div>
           <div class="form-group">
@@ -29,6 +31,7 @@
               <div class="input-group">
                 <input type="text" class="form-control" name="location" id="location" value="<?= $r->location ?>" placeholder="Enter Job Location" required>
               </div>
+              <?php echo form_error('location', '<div class="error">', '</div>'); ?>		
             </div>
           </div>
           <div class="form-group">
@@ -38,6 +41,7 @@
               <textarea name="description" id="description" class="form-control" value="<?= $r->jdescription ?>" placeholder="Enter Full Job Description..." required><?= $r->jdescription ?></textarea>
               
               </div>
+              <?php echo form_error('description', '<div class="error">', '</div>'); ?>		
             </div>
           </div>
           <div class="form-group">
@@ -47,6 +51,7 @@
               <textarea name="requirement" id="requirement" class="form-control"  placeholder="Enter Full Job Requirements..." required><?= $r->jrequirement ?></textarea>
               
               </div>
+              <?php echo form_error('requirement', '<div class="error">', '</div>'); ?>		
             </div>
           </div>
           <div class="form-group">
@@ -76,3 +81,9 @@
     </div>
 </div>
 </div>
+<style>
+.error{
+    color:red;
+    
+}
+</style>

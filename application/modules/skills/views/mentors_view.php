@@ -15,7 +15,9 @@
             <th scope="col">Action</th>
           </tr>
       </thead>
-          <?php foreach ($data->result() as $r){?>
+          <?php foreach ($data->result() as $r){
+            if($r->status==1){ ?>
+
       <tbody>
         <tr>
           <td><?= $r->name?></td>
@@ -36,6 +38,6 @@
       
         <tr>
       </tbody>
-       <?php }?>
+       <?php } }?>
     </table>
 </div>

@@ -3,9 +3,9 @@ class Scapplication extends MX_Controller {
 	function __construct() {
 		
 		$this->load->model('mdl_scapplication');
-		// if(empty($_SESSION['u_id']))
-		// redirect('login');
-		// elseif($this->session->userdata['authorization']==2)
+		if(empty($_SESSION['u_id']))
+		redirect('login');
+		// elseif($_SESSION['authorization']==3)
 		// redirect('home');
 		}
 	
@@ -36,12 +36,13 @@ class Scapplication extends MX_Controller {
 	public function single()
 	{
 
-		
-		$val['file']='scapplication/dapplication_view';
-		$id = $this->uri->segment(3);
-		$this->db->where('ja_id',$id); 
-		$val['data']=$this->db->get('japplication');
-		echo Modules::run('template/layout1',$val);
+	
+			$val['file']='scapplication/dapplication_view';
+			$id = $this->uri->segment(3);
+			$this->db->where('ja_id',$id); 
+			$val['data']=$this->db->get('japplication');
+			echo Modules::run('template/layout1',$val);
+	
 	}
 	public function status()
 	{	

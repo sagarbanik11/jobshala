@@ -29,7 +29,7 @@
   </div>
   <div class="job-block" style="display: flex;">
     <div class="job-listing">
-      <?php foreach ($jobs->result() as $r) { ?>
+      <?php foreach ($jobs->result() as $r) { if($r->jlstatus==1){ ?>
         <div class="mb-3">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1"><?= $r->role ?></h5>
@@ -42,7 +42,7 @@
           <button onclick="window.location.href='<?php echo site_url(); ?>joblist/single/<?= $r->j_id ?>'" type="button" class="btn btn-info float-right">View Details</button>
           <hr>
         </div><br>
-      <?php } ?>
+      <?php } }?>
     </div>
   </div>
 </div>

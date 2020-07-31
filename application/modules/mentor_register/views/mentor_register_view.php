@@ -95,7 +95,6 @@
 		if (password != confirmPassword) {
 			document.getElementById('confirmpassword').style.borderColor = "red";
 			alert("Password do not match.");
-
 			return false;
 		}
 	}

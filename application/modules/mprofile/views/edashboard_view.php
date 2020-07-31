@@ -1,15 +1,15 @@
-<div class="container" style="margin-top:100px">
-<h5 style="font-weight:600;">Opportunities in <?= $_SESSION['name'] ?></h5>
+<div class="container">
+ <legend >Company Job List</legend>
  
  <?php echo $this->session->flashdata('msg'); ?>
- <button onclick="window.location.href='<?php echo site_url(); ?>addjob'" type="button" class="btn btn-outline-info float-right">Add Job</button>
+ <button onclick="window.location.href='<?php echo site_url(); ?>addjob'" type="button" class="btn btn-dark float-right">Add Job</button>
 <br><br>
-    <table class="table table-hover  content_table">
+    <table class="table table-hover table-bordered content_table">
       <thead>
           <tr>
             <th scope="col">Job Id</th>
             <th scope="col">Role</th>
-            <th scope="col">Date Posted</th>
+            <th scope="col">Post Date</th>
             <th scope="col">Sector</th>
             <th scope="col">Status</th>
             <th scope="col">Action</th>
@@ -24,7 +24,7 @@
           <td><?= $r->industry?></td>
           <td>  <p class="card-text">
                         <svg class="bi bi-circle-fill" width="1em" height="1em" viewBox="0 0 16 16" <?php 
-                        if($r->jlstatus==1){ ?> fill="#008200"  <?php }else{ ?> fill="#FF0000"<?php }?>><circle cx="8" cy="8" r="8"/></svg>
+                        if($r->status==1){ ?> fill="#008200"  <?php }else{ ?> fill="#FF0000"<?php }?>><circle cx="8" cy="8" r="8"/></svg>
                        </p></td>
           <td>
          

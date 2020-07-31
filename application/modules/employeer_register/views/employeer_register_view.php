@@ -49,9 +49,11 @@
 						<label for="industry" class="cols-sm-2 control-label">Industry</label>
 						<div class="cols-sm-10">
 							<div class="input-group">
-								<select id="industry" name="industry" class="custom-select">
-									<option value="IT" selected>Example 1</option>
-									<option value="Agriculture">Example 2</option>
+								<select id="industry" name="industry" class="custom-select" required>
+								<?php foreach ($industry->result() as $r){?>	
+									<option value="<?= $r->iname ?>" selected><?= $r->iname ?></option>
+									<?php }?>
+									</select>
 								</select>
 							</div>
 						</div>

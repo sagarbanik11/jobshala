@@ -90,7 +90,7 @@ class Admin extends MX_Controller {
 	{
 
 		
-		$val['file']='admin/demployeer_view';
+		$val['file']='admin/dmentor_view';
 		$this->db->select('*');
 		$this->db->from('mprofile');
 		$this->db->join('user', 'user.u_id= mprofile.u_id');

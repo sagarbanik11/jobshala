@@ -243,7 +243,6 @@
         <div class="col-md-5">
             <div class=" mb-50" style="visibility: visible;">
                 <div class="state-map-image">
-
                 </div>
             </div>
         </div>

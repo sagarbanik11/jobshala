@@ -36,46 +36,67 @@ class Japplication extends MX_Controller
 	}
 	public function save()
 	{
-		$data['j_id']=$_POST['jid'];
-		$data['u_id']=$this->session->userdata['u_id'];
-		$data['name']=$_POST['name'];
-		$data['email']=$_POST['email'];
-		$data['mobile']=$_POST['mobile'];
-		$data['profession']=$_POST['profession'];
-		$data['bio']=$_POST['bio'];
-		$data['address']=$_POST['address'];
-		$data['skills']=$_POST['skills'];
-		$data['hqualification']=$_POST['hqualification'];
-		$data['institute']=$_POST['institute'];
-		$data['stream']=$_POST['stream'];
-		$data['passout']=$_POST['passout'];
-		$data['marks']=$_POST['marks'];
-		$data['dob']=$_POST['dob'];
-		$data['experience']=$_POST['experience'];
-		$data['gender']=$_POST['gender'];
-		$data['website']=$_POST['website'];
-		$data['adate']=date('Y-m-d H:i:s');
-		$data['jstatus']=0;
+		$data['j_id'] = $_POST['jid'];
+		$data['u_id'] = $this->session->userdata['u_id'];
+		$data['name'] = $_POST['name'];
+		$data['email'] = $_POST['email'];
+		$data['mobile'] = $_POST['mobile'];
+		$data['profession'] = $_POST['profession'];
+		$data['bio'] = $_POST['bio'];
+		$data['address'] = $_POST['address'];
+		$data['skills'] = $_POST['skills'];
+		$data['hqualification'] = $_POST['hqualification'];
+		$data['institute'] = $_POST['institute'];
+		$data['stream'] = $_POST['stream'];
+		$data['passout'] = $_POST['passout'];
+		$data['marks'] = $_POST['marks'];
+		$data['dob'] = $_POST['dob'];
+		$data['experience'] = $_POST['experience'];
+		$data['gender'] = $_POST['gender'];
+		$data['website'] = $_POST['website'];
+		$data['adate'] = date('Y-m-d H:i:s');
+		$data['jstatus'] = 0;
 
 		$this->mdl_japplication->apply($data);
 		$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">
 		Application Submitted Successfully.
+		<span class="float-right" onclick="close_alert()">&times;</span>
+		<style>
+				.float-right{
+						cursor:pointer;
+				}
+		</style>
+		<script>
+				function close_alert(){
+						document.querySelector("#msg_alert").style.display="none";
+				}
+		</script>
 	</div>');
 		redirect('uprofile');
 	}
 
-	
-	public function mapply() 
+
+	public function mapply()
 	{
 		$id = $this->uri->segment(3);
-		$data['m_id']=$id;
-		$data['a_id']=$this->session->userdata['u_id'];
+		$data['m_id'] = $id;
+		$data['a_id'] = $this->session->userdata['u_id'];
 
 		$this->mdl_japplication->mapply($data);
-		$this->session->set_flashdata('msg', '<b style="color:green;">Application successfully submitted!</b>');
+		$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">
+		Application submitted successfully.
+		<span class="float-right" onclick="close_alert()">&times;</span>
+		<style>
+				.float-right{
+						cursor:pointer;
+				}
+		</style>
+		<script>
+				function close_alert(){
+						document.querySelector("#msg_alert").style.display="none";
+				}
+		</script>
+		</div>');
 		redirect('uprofile');
 	}
-
-
-	
 }

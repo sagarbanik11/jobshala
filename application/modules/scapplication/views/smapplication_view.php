@@ -1,10 +1,10 @@
-<div class="container">
- <legend >Applications</legend>
- 
+<div class="container" style="margin-top:50px">
+<center><h5>Applications for Mentorship</h5></center>
+<hr> 
  <?php echo $this->session->flashdata('msg'); ?>
 <br><br>
-    <table class="table table-hover table-bordered content_table">
-      <thead>
+    <table class="table table-hover content_table">
+      <thead class="thead-light">
           <tr>
             <th scope="col">Candidate Name</th>
             <th scope="col">Email</th>

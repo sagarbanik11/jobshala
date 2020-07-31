@@ -47,7 +47,20 @@ class Mprofile extends MX_Controller {
 		$data['website']=$_POST['website'];
 
 		$this->mdl_mprofile->update($data);
-		$this->session->set_flashdata('msg', '<b style="color:green;">Profile Updated successfully!</b>');
+		$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">
+			Profile updated Successfully.
+			<span class="float-right" onclick="close_alert()">&times;</span>
+			<style>
+					.float-right{
+							cursor:pointer;
+					}
+			</style>
+			<script>
+					function close_alert(){
+							document.querySelector("#msg_alert").style.display="none";
+					}
+			</script>
+			</div>');
 		redirect('mprofile');
 
 	}

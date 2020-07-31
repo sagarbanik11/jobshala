@@ -3,7 +3,6 @@ class Login extends MX_Controller {
 	function __construct() {
         parent::__construct();
         $this->load->model("Mdl_login","login"); 
-      
     }
 
 	public function index(){
@@ -67,15 +66,14 @@ class Login extends MX_Controller {
         $data = $this->session->all_userdata();
         $this->session->unset_userdata($data);
         $this->session->sess_destroy();
-
-		$this->load->view('login/pending_view');
+        $this->load->view('login/pending_view');
+        
     }
     public function declined()
 	{
         $data = $this->session->all_userdata();
         $this->session->unset_userdata($data);
         $this->session->sess_destroy();
-
 		$this->load->view('login/declined_view');
 	}
     public function logout()  

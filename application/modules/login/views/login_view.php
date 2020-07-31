@@ -22,6 +22,8 @@
 						</div>
 					</div>
 					<?php echo $this->session->flashdata('flash_data'); ?>
+					<?php echo $this->session->flashdata('pending'); ?>
+
 					<div class="form-group ">
 						<button type="submit" class="btn btn-dark">Login</button>
 					</div>

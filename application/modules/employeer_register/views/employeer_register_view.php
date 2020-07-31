@@ -4,13 +4,13 @@
 		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 ">
 			<form class="form-horizontal" action="<?=site_url('employeer_register/save')?>" method="post"><br>
 				<fieldset>
-					<legend >Employeer Signup</legend>			
+				<center><h5>Signup as an Organisation</h5></center>
 					<div class="form-group">
 						<label for="name" class="cols-sm-2 control-label">Company Name</label>
 						<div class="cols-sm-10">
 							<div class="input-group">
 								<input type="text" class="form-control" name="auth" id="auth" value='1' hidden>	
-								<input type="text" class="form-control" name="name" id="name"  placeholder="Enter Company Name" required>
+								<input type="text" class="form-control" name="name" id="name"   required>
 							</div>
 						</div>
 					</div>
@@ -18,7 +18,7 @@
 						<label for="email" class="cols-sm-2 control-label">Official Email</label>
 						<div class="cols-sm-10">
 							<div class="input-group">
-								<input type="email" class="form-control" name="email" id="email"  placeholder="Enter Official Email" required>
+								<input type="email" class="form-control" name="email" id="email"   required>
 							</div>
 						</div>
 						<?php echo form_error('email', '<div class="error">', '</div>'); ?>
@@ -28,7 +28,7 @@
 						<label for="username" class="cols-sm-2 control-label">Mobile No</label>
 						<div class="cols-sm-10">
 							<div class="input-group">
-								<input type="text" class="form-control" name="mobile" id="mobile"  placeholder="Enter Mobile No" required>
+								<input type="text" class="form-control" name="mobile" id="mobile"   required>
 							</div>
 						</div>
 						<?php echo form_error('mobile', '<div class="error">', '</div>'); ?>
@@ -38,8 +38,8 @@
 						<div class="cols-sm-10">
 							<div class="input-group">
 								<select id="sector" name="sector" class="custom-select">
-									<option value="government" selected>Government</option>
-									<option value="private">Private</option>
+									<option value="Government" selected>Government</option>
+									<option value="Private">Private</option>
 									<option value="Freelancer">Freelancer</option>
 								</select>
 							</div>
@@ -62,7 +62,7 @@
 						<label for="password" class="cols-sm-2 control-label">Password</label>
 						<div class="cols-sm-10">
 							<div class="input-group">
-								<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password" required>
+								<input type="password" class="form-control" name="password" id="password"   required>
 							</div>
 						</div>
 					</div>
@@ -71,14 +71,16 @@
 						<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
 						<div class="cols-sm-10">
 							<div class="input-group">
-								<input type="password" class="form-control" name="confirmpassword" id="confirmpassword"  placeholder="Confirm your Password" required>
+								<input type="password" class="form-control" name="confirmpassword" id="confirmpassword"  required>
 							</div>
 						</div>
 						<?php echo form_error('confirmpassword', '<div class="error">', '</div>'); ?>
 					</div>
 
 					<div class="form-group ">
-						<button type="submit" onclick="return Validate()" class="btn btn-dark">SignUp</button>
+						<center>
+						<button type="submit" onclick="return Validate()" class="btn btn-info">Register</button>
+						</center>
 					</div>
 				</fieldset>	
 			</form>

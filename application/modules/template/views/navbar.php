@@ -21,7 +21,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="<?php echo site_url(); ?>user_register">User</a>
-              <a class="dropdown-item" href="<?php echo site_url(); ?>employeer_register">Employeer</a>
+              <a class="dropdown-item" href="<?php echo site_url(); ?>employeer_register">Employer</a>
               <a class="dropdown-item" href="<?php echo site_url(); ?>mentor_register">Mentor</a>
             </div>
           </li>
@@ -37,9 +37,8 @@
           <a class="nav-item nav-link active" href="<?php echo site_url(); ?>scapplication/mapplication">Applications</a>
           <a class="nav-item nav-link active" href="<?= site_url('login/logout') ?>">Logout</a>
         <?php elseif ($this->session->userdata['authorization'] == 0) : ?>
-          <a class="nav-item nav-link active" href="<?php echo site_url(); ?>admin">Dashbaord</a>
-          <a class="nav-item nav-link active" href="<?php echo site_url(); ?>admin/employeer">Employeer</a>
-          <a class="nav-item nav-link active" href="<?php echo site_url(); ?>admin/employee">Employee</a>
+          <a class="nav-item nav-link active" href="<?php echo site_url(); ?>admin">Dashboard</a>
+          <a class="nav-item nav-link active" href="<?php echo site_url(); ?>admin/employeer">Employer</a>
           <a class="nav-item nav-link active" href="<?php echo site_url(); ?>admin/mentor">Mentor</a>
           <a class="nav-item nav-link active" href="<?= site_url('login/logout') ?>">Logout</a>
         <?php else : ?>

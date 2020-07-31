@@ -6,7 +6,7 @@
                     <h3 class="tag-line">In the middle of difficulty
                         lies opportunity</h3>
                     <q style="font-style: italic;">
-                    All of us do not have equal talent. But, all of us have an equal opportunity to develop our talents.
+                        All of us do not have equal talent. But, all of us have an equal opportunity to develop our talents.
                     </q>
                     <br><br>- APJ Abdul Kalam
                     <br><br>
@@ -18,13 +18,13 @@
 
             <div class="col-md-5 col-sm-12">
                 <div class="welcome-thumb">
-                    <img src="<?=base_url();?>/assets/img/work.png" class="img-fluid" alt="Working">
+                    <img src="<?= base_url(); ?>/assets/img/work.png" class="img-fluid" alt="Working">
                 </div>
             </div>
         </div>
     </div>
     <div class="welcome-patter">
-        <img src="<?=base_url();?>/assets/img/pattern.png" class="img-fluid" alt="Pattern">
+        <img src="<?= base_url(); ?>/assets/img/pattern.png" class="img-fluid" alt="Pattern">
     </div>
 </div>
 
@@ -33,8 +33,7 @@
         <div class="col-md-9 col-lg-7">
             <div class="section-heading" style="visibility: visible;">
                 <h4>About Amples</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio sint sequi quo modi autem.
-                    Veniam.</p>
+                <p>Atmanirtbhar People's Learning and Employer System (AMPLES) is a community based opportunities portal.</p>
             </div>
         </div>
     </div>
@@ -42,8 +41,7 @@
         <div class="col-md-5">
             <div class="about-thumb-video mb-50" style="visibility: visible;">
                 <div class="about-thumb">
-                    <img src="<?=base_url();?>/assets/img/about-us.png"
-                        class="img-fluid" alt="">
+                    <img src="<?= base_url(); ?>/assets/img/about-us.png" class="img-fluid" alt="">
                 </div>
 
                 <!-- Video Icon -->
@@ -58,9 +56,16 @@
 
                 <div class="col-md-6">
                     <div class="about-single-card">
-                        <h4>Feature 1</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio sint sequi quo modi autem.
-                            Veniam.</p>
+                        <h4>Location based  Opportunities</h4>
+                        <p>User gets the list of trending sectors in their vicinity where they get to know which skills to acquire.</p>
+                        <a href="#">Read more <i class="ti-angle-double-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="about-single-card">
+                        <h4>Active Tenders Listing</h4>
+                        <p>Get the list of active tenders present for all Ministries/Departments.</p>
                         <a href="#">Read more <i class="ti-angle-double-right"></i></a>
 
                     </div>
@@ -69,31 +74,21 @@
 
                 <div class="col-md-6">
                     <div class="about-single-card">
-                        <h4>Feature 2</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio sint sequi quo modi autem.
-                            Veniam.</p>
-                        <a href="#">Read more <i class="ti-angle-double-right"></i></a>
+                        <h4>Community based Learning Portal</h4>
+                        <p>Learn from the members of the same domain.</p>
+                        <a href="<?= site_url('skills') ?>">Read more <i class="ti-angle-double-right"></i></a>
 
                     </div>
                 </div>
 
+                
 
-                <div class="col-md-6">
+               
+
+                <div class="col-md-6" style="align-items: center;">
                     <div class="about-single-card">
-                        <h4>Feature 3</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio sint sequi quo modi autem.
-                            Veniam.</p>
-                        <a href="#">Read more <i class="ti-angle-double-right"></i></a>
-
-                    </div>
-                </div>
-
-
-                <div class="col-md-6">
-                    <div class="about-single-card">
-                        <h4>Feature 4</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio sint sequi quo modi autem.
-                            Veniam.</p>
+                        <h4>Automatic Portfolio Builder</h4>
+                        <p>Get your profile exported as a professional Curriculum Vitae.</p>
                         <a href="#">Read more <i class="ti-angle-double-right"></i></a>
 
                     </div>
@@ -110,8 +105,7 @@
             <div class="col-md-9 col-lg-7">
                 <div class="section-heading">
                     <h4>Gain Skills</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio sint sequi quo modi autem.
-                        Veniam.</p>
+                    <p>E-skilling courses across multiple sectors. Discover courses.</p>
                 </div>
             </div>
         </div>
@@ -122,7 +116,7 @@
                 <div class="single-service-area">
                     <!-- Single Thumb -->
                     <div class="service-thumb">
-                        <img src="<?=base_url();?>/assets/img/agriculture.png" class="img-fluid" alt="">
+                        <img src="<?= base_url(); ?>/assets/img/agriculture.png" class="img-fluid" alt="">
                     </div>
                     <!-- Service Content -->
                     <div class="service-content-area">
@@ -141,7 +135,7 @@
                 <div class="single-service-area">
                     <!-- Single Thumb -->
                     <div class="service-thumb">
-                        <img src="<?=base_url();?>/assets/img/automotive.png" class="img-fluid" alt="">
+                        <img src="<?= base_url(); ?>/assets/img/automotive.png" class="img-fluid" alt="">
                     </div>
                     <!-- Service Content -->
                     <div class="service-content-area">
@@ -160,7 +154,7 @@
                 <div class="single-service-area">
                     <!-- Single Thumb -->
                     <div class="service-thumb">
-                        <img src="<?=base_url();?>/assets/img/construction.png" class="img-fluid" alt="">
+                        <img src="<?= base_url(); ?>/assets/img/construction.png" class="img-fluid" alt="">
                     </div>
                     <!-- Service Content -->
                     <div class="service-content-area">
@@ -179,7 +173,7 @@
                 <div class="single-service-area">
                     <!-- Single Thumb -->
                     <div class="service-thumb">
-                        <img src="<?=base_url();?>/assets/img/beauty.png" class="img-fluid" alt="">
+                        <img src="<?= base_url(); ?>/assets/img/beauty.png" class="img-fluid" alt="">
                     </div>
                     <!-- Service Content -->
                     <div class="service-content-area">
@@ -198,7 +192,7 @@
                 <div class="single-service-area">
                     <!-- Single Thumb -->
                     <div class="service-thumb">
-                        <img src="<?=base_url();?>/assets/img/jewellery.png" class="img-fluid" alt="">
+                        <img src="<?= base_url(); ?>/assets/img/jewellery.png" class="img-fluid" alt="">
                     </div>
                     <!-- Service Content -->
                     <div class="service-content-area">
@@ -214,11 +208,10 @@
 
             <!-- Single Service Area -->
             <div class="col-md-6 col-lg-4">
-                <div class="single-service-area " data-wow-delay="600ms"
-                    style="visibility: visible; animation-delay: 600ms; animation-name: fadeInUp;">
+                <div class="single-service-area " data-wow-delay="600ms" style="visibility: visible; animation-delay: 600ms; animation-name: fadeInUp;">
                     <!-- Single Thumb -->
                     <div class="service-thumb">
-                        <img src="<?=base_url();?>/assets/img/life-sciences.png" class="img-fluid" alt="">
+                        <img src="<?= base_url(); ?>/assets/img/life-sciences.png" class="img-fluid" alt="">
                     </div>
                     <!-- Service Content -->
                     <div class="service-content-area">
@@ -250,7 +243,7 @@
         <div class="col-md-5">
             <div class=" mb-50" style="visibility: visible;">
                 <div class="state-map-image">
-                    
+
                 </div>
             </div>
         </div>
@@ -296,4 +289,3 @@
         </div>
     </div>
 </div>
-

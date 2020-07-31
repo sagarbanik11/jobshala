@@ -37,7 +37,20 @@ class Admin extends MX_Controller {
 	{
 		$data['skname']=$_POST['skname'];
 		$this->mdl_admin->addskill($data);
-		$this->session->set_flashdata('msg', '<b style="color:green;">Skill added successfully!</b>');
+		$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert" id="msg_alert">
+		Skills added Successfully.
+		<span class="float-right" onclick="close_alert()">&times;</span>
+		<style>
+				.float-right{
+						cursor:pointer;
+				}
+		</style>
+		<script>
+				function close_alert(){
+						document.querySelector("#msg_alert").style.display="none";
+				}
+		</script>
+		</div>');
 		redirect('admin');
 
 	}
@@ -45,7 +58,20 @@ class Admin extends MX_Controller {
 	{
 		$data['iname']=$_POST['iname'];
 		$this->mdl_admin->addindustry($data);
-		$this->session->set_flashdata('msg', '<b style="color:green;">Industry added successfully!</b>');
+		$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert" id="msg_alert">
+		Industries updated Successfully.
+		<span class="float-right" onclick="close_alert()">&times;</span>
+		<style>
+				.float-right{
+						cursor:pointer;
+				}
+		</style>
+		<script>
+				function close_alert(){
+						document.querySelector("#msg_alert").style.display="none";
+				}
+		</script>
+		</div>');
 		redirect('admin');
 
 	}
@@ -81,7 +107,20 @@ class Admin extends MX_Controller {
 		$u_id=$_POST['uid'];
 		$data['status']=$_POST['status'];
 		$this->mdl_admin->employeerupdate($data,$u_id);
-		$this->session->set_flashdata('msg', '<b style="color:green;">Status updated successfully!</b>');
+		$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert" id="msg_alert">
+		Employer\'s Status updated Successfully.
+		<span class="float-right" onclick="close_alert()">&times;</span>
+		<style>
+				.float-right{
+						cursor:pointer;
+				}
+		</style>
+		<script>
+				function close_alert(){
+						document.querySelector("#msg_alert").style.display="none";
+				}
+		</script>
+		</div>');
 		redirect('admin/employeer');
 	}
 	public function mentorstatus()
@@ -91,7 +130,20 @@ class Admin extends MX_Controller {
 		$u_id=$_POST['uid'];
 		$data['status']=$_POST['status'];
 		$this->mdl_admin->mentorupdate($data,$u_id);
-		$this->session->set_flashdata('msg', '<b style="color:green;">Status updated successfully!</b>');
+		$this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert" id="msg_alert">
+		Mentor\'s Status updated Successfully.
+		<span class="float-right" onclick="close_alert()">&times;</span>
+		<style>
+				.float-right{
+						cursor:pointer;
+				}
+		</style>
+		<script>
+				function close_alert(){
+						document.querySelector("#msg_alert").style.display="none";
+				}
+		</script>
+		</div>');
 		redirect('admin/mentor');
 	}
 

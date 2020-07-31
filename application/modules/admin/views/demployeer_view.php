@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" style="margin-top:40px">
     <div class="list-group">
     <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
     <?php foreach ($data->result() as $r){?>
@@ -25,7 +25,7 @@
       
     </a>
     </div>
-        <form class="form-horizontal" action="<?=site_url('admin/mentorstatus')?>" method="post"><br>
+        <form class="form-horizontal" action="<?=site_url('admin/employeerstatus')?>" method="post"><br>
         <input name="uid" id="uid" value='<?= $r->u_id?>' hidden>	
         <label for="status" class="cols-sm-2 control-label">Action</label>
     

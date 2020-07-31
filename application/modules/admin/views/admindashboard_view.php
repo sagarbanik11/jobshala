@@ -1,31 +1,34 @@
-<div class=container>
+<div class="container" style="margin-top:50px;">
 <div class=row>
 <div class=col-md-6>
 <form method="post" action="<?=site_url('admin/addskill')?>">
-<legend >Add Skills</legend>	
-  <div class="form-group">
+<center>
+ <h6>Add Skills</h6>
+
+</center> <hr>
+  <div class="form-group mt-2">
     <label for="skname">Skill Name:</label>
     <input type="test" class="form-control" name="skname" id="skname">
   </div>
   <button type="submit" class="btn btn-primary">Add Skill</button>
 </form>
 
-<table class="table table-hover table-bordered content_table">
-      <thead>
+<table class="table table-hover table-bordered content_table mt-2">
+      <thead class="thead-light">
           <tr>
-            <th scope="col">Skill</th>
-            <th scope="col">Action</th>
+            <th scope="col" >Skill</th>
+            <!-- <th scope="col">Action</th> -->
           </tr>
       </thead>
       <?php foreach ($skills->result() as $r){?>
       <tbody>
         <tr>
           <td class="col-md-4"><?= $r->skname?></td>
-        <td>
+        <!-- <td>
             <a href="#" class="btn">
             <i class="fa fa-trash" style="font-size:15px;color:red" aria-hidden="true"></i>            
             </a>
-        </td>
+        </td> -->
       
         <tr>
       </tbody>
@@ -36,30 +39,33 @@
 
 <div class=col-md-6>
 <form method="post" action="<?=site_url('admin/addindustry')?>">
-<legend >Industry</legend>	
-  <div class="form-group">
+<center>
+ <h6>Add Industries</h6>
+
+</center> <hr>	
+  <div class="form-group mt-2">
     <label for="iname">Industry Name:</label>
     <input type="text" class="form-control" name="iname" id="iname">
   </div>
   <button type="submit" class="btn btn-primary">Add Industry</button>
 </form>
 
-<table class="table table-hover table-bordered content_table">
-      <thead>
+<table class="table table-hover table-bordered content_table mt-2">
+      <thead class="thead-light">
           <tr>
-            <th scope="col">Industry</th>
-            <th scope="col">Action</th>
+            <th scope="col" >Industry</th>
+            <!-- <th scope="col">Action</th> -->
           </tr>
       </thead>
       <?php foreach ($industry->result() as $r){?>
       <tbody>
         <tr>
           <td class="col-md-4"><?= $r->iname?></td>
-        <td>
+        <!-- <td>
             <a href="#" class="btn">
             <i class="fa fa-trash" style="font-size:15px;color:red" aria-hidden="true"></i>            
             </a>
-        </td>
+        </td> -->
       
         <tr>
       </tbody>

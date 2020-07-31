@@ -17,14 +17,14 @@ class Tenders extends MX_Controller {
 		$this->db->from('joblist');
 		$this->db->join('user', 'user.u_id= joblist.u_id');
 		$val['jobs']=$this->db->get();
-		$val['file']='joblist/joblist_view';
+		$val['file']='tenders/joblist_view';
 		echo Modules::run('template/layout1',$val);
 	}
 	public function single()
 	{
 
 		
-		$val['file']='joblist/singlepost_view';
+		$val['file']='tenders/singlepost_view';
 		$this->db->select('*');
 		$this->db->from('joblist');
 		$this->db->join('user', 'user.u_id= joblist.u_id');

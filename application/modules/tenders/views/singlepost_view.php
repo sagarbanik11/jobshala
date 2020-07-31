@@ -6,7 +6,7 @@
           <h5 class="mb-1"><?= $r->role ?></h5>
           <small><?= $r->date ?></small>
         </div>
-        <p class="mb-1"><?= $r->name; ?></p>
+        <p class="mb-1">Abhinav</p>
         <legend>Job Description</legend>
         <p class="mb-1"><?= $r->jdescription ?></p>
         <legend>Job Requirement</legend>

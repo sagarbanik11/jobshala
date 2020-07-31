@@ -1,8 +1,8 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
-class User_Register extends MX_Controller {
+class Mentor_Register extends MX_Controller {
     function __construct(){
 		parent::__construct();
-		$this->load->model('mdl_user_register');
+		$this->load->model('mdl_mentor_register');
 		{
 			if(!empty($_SESSION['u_id']))
 			redirect('home');
@@ -14,7 +14,8 @@ class User_Register extends MX_Controller {
 
 	public function index()
 	{
-		$val['file']='user_register/user_register_view';
+		$val['data']=$this->db->get('skills');
+		$val['file']='mentor_register/mentor_register_view';
 		echo Modules::run('template/layout1',$val);
 	}
 	public function save()
@@ -24,7 +25,7 @@ class User_Register extends MX_Controller {
 		$this->form_validation->set_rules('email','Email','valid_email|required|is_unique[user.email]',array('is_unique' => 'This %s already exists.'));
 		$this->form_validation->set_rules('mobile','Mobile Number','numeric|is_unique[user.mobile]',array('is_unique' => 'This %s already exists.'));
 		$this->form_validation->set_rules('password','Password','required|matches[password]');
-		$this->form_validation->set_rules('confirmpassword','ConfirmPassword','required|matches[password]');
+		$this->form_validation->set_rules('confirmpassword','Confirm Password','required|matches[password]');
 
 		if ($this->form_validation->run() == FALSE)
 		{
@@ -33,19 +34,18 @@ class User_Register extends MX_Controller {
 		}
 		else
 		{
-			$data['name']=$_POST['name'];
+		    $data['name']=$_POST['name'];
 			$data['email']=$_POST['email'];
 			$data['mobile']=$_POST['mobile'];
 			$data['password']=md5($_POST['password']);
-			$data['authorization']=2;
-			$data['status']=1;  
-		
+			$data['authorization']=3; 
 
-			$data1['u_id']=$this->mdl_user_register->add($data);
+			$data1['u_id']=$this->mdl_mentor_register->add($data);
 			$data1['email']=$_POST['email'];
 			$data1['mobile']=$_POST['mobile'];
-			$id=$this->mdl_user_register->adduprofile($data1);
-			$this->session->set_flashdata('msg', '<b style="color:green;">Congratulations!, Your registration was successful as an Applicant</b>');
+			$data1['skill']=$_POST['skill'];
+			$id=$this->mdl_mentor_register->addeprofile($data1);
+			$this->session->set_flashdata('msg', '<b style="color:green;">Congratulations!, Your registration was successful as a Mentor, login after verification</b>');
 		    redirect('login'); 
 
 		}

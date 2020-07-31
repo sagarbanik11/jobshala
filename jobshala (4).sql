@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 30, 2020 at 08:54 PM
+-- Generation Time: Jul 31, 2020 at 11:11 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -142,6 +142,51 @@ INSERT INTO `joblist` (`j_id`, `u_id`, `job_id`, `role`, `location`, `industry`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `mapplication`
+--
+
+CREATE TABLE `mapplication` (
+  `ma_id` int(11) NOT NULL,
+  `a_id` int(11) NOT NULL,
+  `m_id` int(11) NOT NULL,
+  `date` date NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `mapplication`
+--
+
+INSERT INTO `mapplication` (`ma_id`, `a_id`, `m_id`, `date`) VALUES
+(3, 25, 34, '2020-07-31');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mprofile`
+--
+
+CREATE TABLE `mprofile` (
+  `m_id` int(11) NOT NULL,
+  `u_id` int(11) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `mobile` varchar(20) NOT NULL,
+  `skill` varchar(100) NOT NULL,
+  `about` text DEFAULT NULL,
+  `website` varchar(200) DEFAULT NULL,
+  `date` date NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `mprofile`
+--
+
+INSERT INTO `mprofile` (`m_id`, `u_id`, `email`, `mobile`, `skill`, `about`, `website`, `date`) VALUES
+(1, 34, 'aniket@gmail.com', '34232323', '4', 'I have 4 years Digital Marketing Experience ', 'https://www.linkedin.com/in/aniket/', '2020-07-31'),
+(2, 35, 'subham@gmail.com', '8509632323', '1', 'Experience in Agriculture', 'www.subham.in', '2020-07-31');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `skills`
 --
 
@@ -227,7 +272,9 @@ INSERT INTO `user` (`u_id`, `name`, `email`, `mobile`, `sector`, `industry`, `pa
 (29, 'Admin', 'admin@amples.com', '31212123', NULL, NULL, '21232f297a57a5a743894a0e4a801fc3', 0, 1, '2020-07-30'),
 (30, 'Sumit Banik', 'sumit@gmail.com', '3223232', NULL, NULL, '7225ff71e8821b24fd72b4c8fda95b9a', 2, 1, '2020-07-30'),
 (31, 'Infosys', 'admin@infosys.com', '32323232', 'private', 'IT', 'c616827db04debdb52286b1b5c31439d', 1, 2, '2020-07-30'),
-(32, 'Wipro', 'admin@wipro.com', '344223', 'private', 'IT', 'c1cf502a9441c48e7ee98f32d1d64413', 1, 1, '2020-07-31');
+(32, 'Wipro', 'admin@wipro.com', '344223', 'private', 'IT', 'c1cf502a9441c48e7ee98f32d1d64413', 1, 1, '2020-07-31'),
+(34, 'Aniket Ghosh', 'aniket@gmail.com', '34232323', NULL, NULL, '9dbbae8b0159030ac238af0985c3ad65', 3, 1, '2020-07-31'),
+(35, 'Subham Ghosh', 'subham@gmail.com', '8509632323', NULL, NULL, '1a6c42113064a6c2888f5064385bbbef', 3, 1, '2020-07-31');
 
 --
 -- Indexes for dumped tables
@@ -256,6 +303,18 @@ ALTER TABLE `japplication`
 --
 ALTER TABLE `joblist`
   ADD PRIMARY KEY (`j_id`);
+
+--
+-- Indexes for table `mapplication`
+--
+ALTER TABLE `mapplication`
+  ADD PRIMARY KEY (`ma_id`);
+
+--
+-- Indexes for table `mprofile`
+--
+ALTER TABLE `mprofile`
+  ADD PRIMARY KEY (`m_id`);
 
 --
 -- Indexes for table `skills`
@@ -304,6 +363,18 @@ ALTER TABLE `joblist`
   MODIFY `j_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
+-- AUTO_INCREMENT for table `mapplication`
+--
+ALTER TABLE `mapplication`
+  MODIFY `ma_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `mprofile`
+--
+ALTER TABLE `mprofile`
+  MODIFY `m_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `skills`
 --
 ALTER TABLE `skills`
@@ -319,7 +390,7 @@ ALTER TABLE `uprofile`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

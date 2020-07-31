@@ -9,10 +9,12 @@
         <p class="mb-1"><?= $r->email?></p>
         <b class="mb-1">Mobile</b>
         <p class="mb-1"><?= $r->mobile?></p>
-        <b class="mb-1">Sector</b>
-        <p class="mb-1"><?= $r->sector?></p>
-        <b class="mb-1">Industry</b>
-        <p class="mb-1"><?= $r->industry?></p>
+        <b class="mb-1">Skill</b>
+        <p class="mb-1"><?= $r->skname?></p>
+        <b class="mb-1">About</b>
+        <p class="mb-1"><?= $r->about?></p>
+        <b class="mb-1">Website</b>
+        <p class="mb-1"><?= $r->website?></p>
         <b class="mb-1">Status</b>
             <?php if($r->status==0):?>
             <p class="mb-1">Pending</p>

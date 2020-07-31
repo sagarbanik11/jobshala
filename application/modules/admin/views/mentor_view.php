@@ -1,28 +1,40 @@
 <div class="container">
-    <div class="list-group">
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-    <?php echo $this->session->flashdata('msg'); ?><br>
-    <?php foreach ($data->result() as $r){?>
-       
+<br>
+ <legend >Mentor List</legend>
+ 
+ <?php echo $this->session->flashdata('msg'); ?>
 
-        <b class="mb-1">Email</b>
-        <p class="mb-1"><?= $r->email?></p>
-        <b class="mb-1">Mobile</b>
-        <p class="mb-1"><?= $r->mobile?></p>
-        <b class="mb-1">Sector</b>
-        <p class="mb-1"><?= $r->sector?></p>
-        <b class="mb-1">Industry</b>
-        <p class="mb-1"><?= $r->industry?></p>
-        <b class="mb-1">Address</b>
-        <p class="mb-1"><?= $r->address?></p>
-        <b class="mb-1">About</b>
-        <p class="mb-1"><?= $r->about?></p>
-        <b class="mb-1">Website Address</b>
-        <p class="mb-1"><?= $r->website?></p>
-        <?php }?>
-        <div class="col-md-2">
-                    <button onclick="window.location.href='<?php echo site_url(); ?>eprofile/editprofile'" type="button" class="btn btn-dark float-right">Edit Profile</button>
-        </div>
-    </a>
-    </div>
-</div>
+    <table class="table table-hover table-bordered content_table">
+      <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile</th>
+            <th scope="col">Status</th>
+            <th scope="col">Action</th>
+          </tr>
+      </thead>
+          <?php foreach ($mentor->result() as $r){?>
+      <tbody>
+        <tr>
+          <td><?= $r->name?></td>
+          <td><?= $r->email?></td>
+          <td><?= $r->mobile?></td>
+          <?php if($r->status==0):?>
+           <td>Pending</td>
+            <?php elseif($r->status==1):?>
+            <td>Approved</td>
+            <?php elseif($r->status==2):?>
+            <td>Declined</td>
+          <?php endif?>
+          <td>
+         <a href="<?php echo site_url(); ?>admin/dmentor/<?= $r->u_id?>" class="btn">
+         <i class="fa fa-edit" style="font-size:20px;color:black" aria-hidden="true"></i>     
+         </a>
+         </td>
+      
+        <tr>
+      </tbody>
+       <?php }?>
+    </table>
+</div> 

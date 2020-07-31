@@ -25,6 +25,14 @@ class Admin extends MX_Controller {
 		$val['file']='admin/employeer_view';
 		echo Modules::run('template/layout1',$val);
 	}
+	public function mentor()
+	{
+		
+		$this->db->where('authorization',3);
+		$val['mentor']=$this->db->get('user');
+		$val['file']='admin/mentor_view';
+		echo Modules::run('template/layout1',$val);
+	}
 	public function addskill()
 	{
 		$data['skname']=$_POST['skname'];
@@ -51,6 +59,21 @@ class Admin extends MX_Controller {
 		$val['data']=$this->db->get('user');
 		echo Modules::run('template/layout1',$val);
 	}
+
+	public function dmentor()
+	{
+
+		
+		$val['file']='admin/demployeer_view';
+		$this->db->select('*');
+		$this->db->from('mprofile');
+		$this->db->join('user', 'user.u_id= mprofile.u_id');
+		$this->db->join('skills', 'skills.sk_id= mprofile.skill');
+		$id = $this->uri->segment(3);
+		$this->db->where('mprofile.u_id',$id);
+		$val['data']=$this->db->get();
+		echo Modules::run('template/layout1',$val);
+	}
 	public function employeerstatus()
 	{
 
@@ -60,6 +83,16 @@ class Admin extends MX_Controller {
 		$this->mdl_admin->employeerupdate($data,$u_id);
 		$this->session->set_flashdata('msg', '<b style="color:green;">Status updated successfully!</b>');
 		redirect('admin/employeer');
+	}
+	public function mentorstatus()
+	{
+
+		
+		$u_id=$_POST['uid'];
+		$data['status']=$_POST['status'];
+		$this->mdl_admin->mentorupdate($data,$u_id);
+		$this->session->set_flashdata('msg', '<b style="color:green;">Status updated successfully!</b>');
+		redirect('admin/mentor');
 	}
 
 	

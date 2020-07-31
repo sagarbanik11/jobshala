@@ -10,6 +10,10 @@ class Mdl_japplication extends MX_Controller {
         $this->db->insert($this->table,$data);
         return $this->db->insert_id();
     }
+    function mapply($data){
+        $this->db->insert('mapplication',$data);
+        return $this->db->insert_id();
+    }
     
     
 }

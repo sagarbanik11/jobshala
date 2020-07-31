@@ -17,6 +17,10 @@ class Mdl_admin extends MX_Controller {
         $this->db->where('u_id',$u_id);
         return $this->db->update('user', $data);
     }
+    function mentorupdate($data,$u_id){
+        $this->db->where('u_id',$u_id);
+        return $this->db->update('user', $data);
+    }
     
     
     

@@ -21,6 +21,18 @@ class Scapplication extends MX_Controller {
 		$val['file']='scapplication/scapplication_view';
 		echo Modules::run('template/layout1',$val);
 	}
+
+	public function mapplication()
+	{
+
+		$this->db->select('*');
+		$this->db->from('mapplication');
+		$this->db->join('user', 'user.u_id= mapplication.a_id');
+		$this->db->where('mapplication.m_id',$this->session->userdata('u_id'));
+		$val['data']=$this->db->get();
+		$val['file']='scapplication/smapplication_view';
+		echo Modules::run('template/layout1',$val);
+	}
 	public function single()
 	{
 

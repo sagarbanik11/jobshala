@@ -1,19 +1,13 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
-class Mdl_japplication extends MX_Controller {
+class Mdl_skills extends MX_Controller {
     private $table;
     function __construct(){
         parent::__construct();
-        $this->table='japplication';
+        $this->table='items';
     }
     
-    function apply($data){
+    function add($data){
         $this->db->insert($this->table,$data);
         return $this->db->insert_id();
     }
-    function mapply($data){
-        $this->db->insert('mapplication',$data);
-        return $this->db->insert_id();
-    }
-    
-    
 }

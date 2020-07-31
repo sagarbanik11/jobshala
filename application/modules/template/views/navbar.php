@@ -14,7 +14,7 @@
           <a class="nav-item nav-link active" href="<?= site_url('joblist') ?>">Job List</a>
           <a class="nav-item nav-link active" href="<?= site_url('home') ?>">Opportunities</a>
           <a class="nav-item nav-link active" href="<?= site_url('home') ?>">Tenders</a>
-          <a class="nav-item nav-link active" href="<?= site_url('home') ?>">Skills</a>
+          <a class="nav-item nav-link active" href="<?= site_url('skills') ?>">Skills</a>
         <?php if (!isset($_SESSION['u_id'])) : ?>
 
           <li class="nav-item dropdown">
@@ -24,7 +24,7 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="<?php echo site_url(); ?>user_register">User</a>
               <a class="dropdown-item" href="<?php echo site_url(); ?>employeer_register">Employeer</a>
-              <a class="dropdown-item" href="<?php echo site_url(); ?>restaurant_register">Mentor</a>
+              <a class="dropdown-item" href="<?php echo site_url(); ?>mentor_register">Mentor</a>
             </div>
           </li>
           <a class="nav-item nav-link active" href="<?php echo site_url(); ?>login">Login</a>
@@ -33,6 +33,10 @@
           <a class="nav-item nav-link active" href="<?php echo site_url(); ?>eprofile/dashboard">Dashboard</a>
           <a class="nav-item nav-link active" href="<?php echo site_url(); ?>addjob">Add Job</a>
           <a class="nav-item nav-link active" href="<?php echo site_url(); ?>scapplication">Applications</a>
+          <a class="nav-item nav-link active" href="<?= site_url('login/logout') ?>">Logout</a>
+        <?php elseif ($this->session->userdata['authorization'] == 3) : ?>
+          <a class="nav-item nav-link active" href="<?php echo site_url(); ?>mprofile">Profile</a>
+          <a class="nav-item nav-link active" href="<?php echo site_url(); ?>scapplication/mapplication">Applications</a>
           <a class="nav-item nav-link active" href="<?= site_url('login/logout') ?>">Logout</a>
         <?php elseif ($this->session->userdata['authorization'] == 0) : ?>
           <a class="nav-item nav-link active" href="<?php echo site_url(); ?>admin">Dashbaord</a>

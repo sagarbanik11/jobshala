@@ -39,7 +39,7 @@ class Employeer_Register extends MX_Controller {
 			$data['sector']=$_POST['sector'];
 			$data['industry']=$_POST['industry'];
 			$data['password']=md5($_POST['password']);
-			$data['authorization']=$_POST['auth']; 
+			$data['authorization']=1; 
 
 			$data1['u_id']=$this->mdl_employeer_register->add($data);
 			$data1['email']=$_POST['email'];

@@ -28,7 +28,7 @@ class Login extends MX_Controller {
                 elseif($this->session->userdata['authorization']==2){
                     redirect('uprofile');
                 }
-                elseif($this->session->userdata['authorization']==3){
+                elseif($this->session->userdata['authorization']==3 && $_SESSION['status']==1){
                     redirect('mprofile');
                 }
                 elseif($this->session->userdata['authorization']==0){

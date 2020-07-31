@@ -60,6 +60,18 @@ class Japplication extends MX_Controller {
 		redirect('uprofile');
 	}
 
+	
+	public function mapply() 
+	{
+		$id = $this->uri->segment(3);
+		$data['m_id']=$id;
+		$data['a_id']=$this->session->userdata['u_id'];
+
+		$this->mdl_japplication->mapply($data);
+		$this->session->set_flashdata('msg', '<b style="color:green;">Application successfully submitted!</b>');
+		redirect('uprofile');
+	}
+
 
 	
 }

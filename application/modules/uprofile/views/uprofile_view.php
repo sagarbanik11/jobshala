@@ -1,6 +1,6 @@
 <style>
-    .x{
-        color:#6610f2 !important;
+    .x {
+        color: #6610f2 !important;
     }
 </style>
 
@@ -29,7 +29,7 @@
                         </h6>
                         <ul class="nav nav-tabs" id="myTab" role="tablist" style="margin-top: 50px;">
                             <li class="nav-item">
-                                <a class="nav-link x active"  id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                                <a class="nav-link x active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link x" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Timeline</a>
@@ -117,7 +117,9 @@
                                 <label>Experience</label>
                             </div>
                             <div class="col-md-6">
-                                <p><?php if($r->experience == NULL): echo "0"; else: echo $r->experience."years"; endif  ?></p>
+                                <p><?php if ($r->experience == NULL) : echo "0";
+                                    else : echo $r->experience . "years";
+                                    endif  ?></p>
                             </div>
                         </div>
                         <div class="row">
@@ -128,7 +130,7 @@
                                 <p><?= $r->address ?></p>
                             </div>
                         </div>
-                        
+
                         <div class="row">
                             <div class="col-md-12">
                                 <label>Biography</label><br />
@@ -183,26 +185,34 @@
         <?php } ?>
         </div>
     </form>
-    <a href="<?=site_url();?>uprofile/pdf" target="_blank" type="button" class="btn btn-info float-right" style="color:white">Export Porfolio <i class="fa fa-download" aria-hidden="true"></i></a>
-    
+    <a href="<?= site_url(); ?>uprofile/pdf" target="_blank" type="button" class="btn btn-info float-right" style="color:white">Export Porfolio <i class="fa fa-download" aria-hidden="true"></i></a>
+
 </div>
 <br><br>
 <div class="container" style="width:100%">
-<div class="accordion" id="accordionExample">
+    <div class="accordion" id="accordionExample">
 
-  <div class="card">
-    <div class="card-header" id="headingTwo">
-      <h2 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Tips on COVID-19
-        </button>
-      </h2>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Tips on COVID-19
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    Losing a job is an unpleasant feeling; however, you need to move on as well. 
+                    To begin with, ensure you’ve updated your resume and uploaded it on relevant job portals and have started reaching out to your contacts who can help you land another job. 
+                    You can also use the time in between to upskill yourself, preferably using an affordable if not free online course or certification programme, for better job prospects. 
+                    Meanwhile, also try to look for ways to monetise your skills and hobbies. 
+                    These could be taking up freelancing projects or online tutoring among many other things.
+                </div>
+                <center class="mb-5">
+                    <iframe width="700" height="500" src="https://www.youtube.com/embed/TVU4jEeZUvY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </center>
+            </div>
+        </div>
     </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-</div>
 </div>

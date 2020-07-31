@@ -7,11 +7,13 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
       <div class="navbar-nav ">
-        <a class="nav-item nav-link active" href="<?= site_url('joblist') ?>">Opportunities</a>
-        <a class="nav-item nav-link active" href="<?= site_url('joblist/otherjobs') ?>">Other Jobs</a>
-        <a class="nav-item nav-link active" href="<?= site_url('tenders') ?>">Tenders</a>
-        <a class="nav-item nav-link active" href="<?= site_url('skills') ?>">Skills</a>
+
+
         <?php if (!isset($_SESSION['u_id'])) : ?>
+          <a class="nav-item nav-link active" href="<?= site_url('joblist') ?>">Opportunities</a>
+          <a class="nav-item nav-link active" href="<?= site_url('joblist/otherjobs') ?>">Other Jobs</a>
+          <a class="nav-item nav-link active" href="<?= site_url('tenders') ?>">Tenders</a>
+          <a class="nav-item nav-link active" href="<?= site_url('skills') ?>">Skills</a>
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -31,17 +33,9 @@
           <a class="nav-item nav-link active" href="<?php echo site_url(); ?>scapplication">Applications</a>
           <a class="nav-item nav-link active" href="<?= site_url('login/logout') ?>">Logout</a>
         <?php elseif ($this->session->userdata['authorization'] == 3) : ?>
-          <li class="nav-item dropdown">
-            <a class="dropdown-toggle nav-link active" href="#" role="button" id="#myprofile-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              My Profile
-            </a>
-            <div class="dropdown-menu" aria-labelledby="myprofile-info">
-              <a class="dropdown-item" href="<?= site_url('mprofile') ?>">Account</a>
-              <a class="dropdown-item" href="<?php echo site_url(); ?>scapplication/mapplication">Applications</a>
-              <a class="dropdown-item" href="<?= site_url('login/logout') ?>">Logout</a>
-            </div>
-          </li>
-
+          <a class="nav-item nav-link active" href="<?= site_url('mprofile') ?>">Account</a>
+          <a class="nav-item nav-link active" href="<?php echo site_url(); ?>scapplication/mapplication">Applications</a>
+          <a class="nav-item nav-link active" href="<?= site_url('login/logout') ?>">Logout</a>
         <?php elseif ($this->session->userdata['authorization'] == 0) : ?>
           <a class="nav-item nav-link active" href="<?php echo site_url(); ?>admin">Dashbaord</a>
           <a class="nav-item nav-link active" href="<?php echo site_url(); ?>admin/employeer">Employeer</a>
@@ -49,16 +43,21 @@
           <a class="nav-item nav-link active" href="<?php echo site_url(); ?>admin/mentor">Mentor</a>
           <a class="nav-item nav-link active" href="<?= site_url('login/logout') ?>">Logout</a>
         <?php else : ?>
+          <a class="nav-item nav-link active" href="<?= site_url('joblist') ?>">Opportunities</a>
+          <a class="nav-item nav-link active" href="<?= site_url('joblist/otherjobs') ?>">Other Jobs</a>
+          <a class="nav-item nav-link active" href="<?= site_url('tenders') ?>">Tenders</a>
+          <a class="nav-item nav-link active" href="<?= site_url('skills') ?>">Skills</a>
           <li class="nav-item dropdown">
-            <a class="dropdown-toggle nav-link active" href="#" role="button" id="#myprofile-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               My Profile
             </a>
-            <div class="dropdown-menu" aria-labelledby="myprofile-info">
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="<?= site_url('uprofile') ?>">Account</a>
-              <a class="dropdown-item" href="<?php echo site_url(); ?>japplication/allview">Applications</a>
+              <a class="dropdown-item" href="<?php echo site_url(); ?>japplication/allview">Submitted Applications</a>
               <a class="dropdown-item" href="<?= site_url('login/logout') ?>">Logout</a>
             </div>
           </li>
+
         <?php endif ?>
 
       </div>

@@ -42,14 +42,5 @@
         </div><br>
       <?php } ?>
     </div>
-    <p class="mb-1"><?= $r->name?></p>
-    <small><?= $r->location?></small>
-    <button onclick="window.location.href='<?php echo site_url(); ?>joblist/single/<?= $r->j_id?>'" type="button" class="btn btn-dark float-right">View More</button>
-  </a>
+  </div>
 </div>
-</div>
-<<<<<<< HEAD
-
-
-=======
->>>>>>> Indeed API

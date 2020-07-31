@@ -4,12 +4,12 @@
 			<form class="form-horizontal" method="post" action="<?= site_url('login') ?>"><br>
 				<?php echo $this->session->flashdata('msg'); ?><br>
 				<fieldset>
-					<legend >Sign in</legend>			
-					<div class="form-group">
-						<label for="email" class="cols-sm-2 control-label">Email</label>
+					<legend >Sign in</legend>		
+					<div class="form-group mt-1">
+						<label for="email" class="cols-sm-2 control-label">Email Address</label>
 						<div class="cols-sm-10">
 							<div class="input-group">
-								<input type="email" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+								<input type="email" class="form-control" name="email" id="email" required />
 							</div>
 						</div>
 					</div>
@@ -17,7 +17,7 @@
 						<label for="password" class="cols-sm-2 control-label">Password</label>
 						<div class="cols-sm-10">
 							<div class="input-group">
-								<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+								<input type="password" class="form-control" name="password" id="password" required/>
 							</div>
 						</div>
 					</div>

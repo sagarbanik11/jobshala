@@ -33,12 +33,14 @@
         <div class="mb-3">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1"><?= $r->role ?></h5>
-            <small><?= $r->date ?></small>
+            <small><?= $r->date ?>
+            <br> <?= $r->sector ?>
+            </small>
           </div>
           <p class="mb-1"><?= $r->name ?></p>
           <small><i class="fa fa-map-marker" aria-hidden="true"></i> <?= $r->location ?></small>
-          <button onclick="window.location.href='<?php echo site_url(); ?>joblist/single/<?= $r->j_id ?>'" 
-          type="button" class="btn btn-info float-right">View Details</button><hr>
+          <button onclick="window.location.href='<?php echo site_url(); ?>joblist/single/<?= $r->j_id ?>'" type="button" class="btn btn-info float-right">View Details</button>
+          <hr>
         </div><br>
       <?php } ?>
     </div>

@@ -3,13 +3,13 @@ class Mdl_tenders extends MX_Controller {
     private $table;
     function __construct(){
         parent::__construct();
-        $this->table='items';
+        $this->table='tenders';
     }
     
-    function add($data){
-        $this->db->insert($this->table,$data);
-        return $this->db->insert_id();
-    }
+    // function add($data){
+    //     $this->db->insert($this->table,$data);
+    //     return $this->db->insert_id();
+    // }
     
     
 }

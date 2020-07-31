@@ -6,10 +6,10 @@ class Mdl_tenders extends MX_Controller {
         $this->table='tenders';
     }
     
-    // function add($data){
-    //     $this->db->insert($this->table,$data);
-    //     return $this->db->insert_id();
-    // }
+    function add($data){
+        $this->db->insert($this->table,$data);
+        return $this->db->insert_id();
+    }
     
     
 }

@@ -1,7 +1,7 @@
 
 
 <style>
-    #mentor-card {
+    #employer-card {
         border-radius: 8px;
         -webkit-box-shadow: 3px 10px 44px 0px rgba(222, 222, 222, 1);
         -moz-box-shadow: 3px 10px 44px 0px rgba(222, 222, 222, 1);
@@ -26,7 +26,7 @@
     }
 </style>
 <div class="container align-middle" style="margin-top:95px;">
-    <div class="card mb-3" id="mentor-card" style="max-width: 569px;">
+    <div class="card mb-3" id="employer-card" style="max-width: 569px;">
         <?php foreach ($data->result() as $r) { ?>
 
             <div class="row no-gutters">
@@ -57,7 +57,9 @@
                         </p>
                         </p>
                         <p class="card-text" style="font-weight: 500;font-size: 14px;">
-                            <span id="bold-head">Website: </span><a href="<?= $r->website ?>">View Profile&nbsp;<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                            <span id="bold-head">Website: </span>
+                            <a href="<?= $r->website ?>">View <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a><br />
+                            <!-- <a href="ww.ccwc.cc" >View Profile&nbsp;<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a> -->
                         </p>
                     </div>
                 </div>
@@ -70,7 +72,7 @@
     </div>
     <br>
     <center>
-        <button onclick="window.location.href='<?php echo site_url(); ?>mprofile/editprofile'" type="button" class="btn btn-outline-info">Edit Profile</button>
+        <button onclick="window.location.href='<?php echo site_url(); ?>eprofile/editprofile'" type="button" class="btn btn-outline-info">Edit Profile</button>
 
     </center>
 

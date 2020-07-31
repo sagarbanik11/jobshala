@@ -6,13 +6,12 @@
                     <h3 class="tag-line">In the middle of difficulty
                         lies opportunity</h3>
                     <q style="font-style: italic;">
-                        It's through curiosity and looking at opportunities in new ways that we've always mapped our
-                        path.
+                    All of us do not have equal talent. But, all of us have an equal opportunity to develop our talents.
                     </q>
-                    <br><br>- Michael Dell
+                    <br><br>- APJ Abdul Kalam
                     <br><br>
                     <div class="welcome-btn">
-                        <a class="welcome-btn mr-2 mb-2" href="#">Explore Opportunities</a>
+                        <a class="welcome-btn mr-2 mb-2" href="<?= site_url('joblist') ?>">Explore Opportunities</a>
                     </div>
                 </div>
             </div>
@@ -130,7 +129,7 @@
                         <div class="icon-area">
                             <i class="ti-bookmark-alt"></i>
                         </div>
-                        <a href="#">
+                        <a href="<?= site_url('skills') ?>">
                             <h4>Agriculture</h4>
                         </a>
                     </div>
@@ -149,7 +148,7 @@
                         <div class="icon-area">
                             <i class="ti-bookmark-alt"></i>
                         </div>
-                        <a href="#">
+                        <a href="<?= site_url('skills') ?>">
                             <h4>Automotive</h4>
                         </a>
                     </div>
